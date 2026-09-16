@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///C:/Users/mnofalah/Downloads/index_3.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<base target="_top">--><base href="." target="_top">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+  :root{
+    --page-bg:#E8E1D0; --paper:#FBF7EE; --ink:#232B3B; --ink-soft:#5B6472;
+    --gold:#B8892B; --teal:#3E6E63; --brick:#A44B3F; --line:#D8CFB8;
+  }
+  *{ box-sizing:border-box; -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+  html, body{ width:100%; overflow-x:hidden; }
+  body{ margin:0; background:var(--page-bg); font-family:'Inter',sans-serif; color:var(--ink); }
+  .wrap{ max-width:560px; margin:0 auto; padding:22px 14px 40px; }
+  .display{ font-family:'Fraunces',serif; }
+  .mono{ font-family:'IBM Plex Mono',monospace; }
+  h1{ font-size:22px; margin:0; }
+  .subtitle{ font-size:12.5px; color:var(--ink-soft); margin:5px 0 0; line-height:1.4; }
+  .headerRow{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+  .statLine{ font-size:11px; color:var(--ink-soft); white-space:nowrap; }
+  .modeTabs{ display:flex; gap:6px; margin:16px 0 0; }
+  .modeTabs .tab{ flex:1; text-align:center; }
+  .tabs{ display:flex; flex-wrap:wrap; gap:6px; margin:12px 0 14px; }
+  .tab{ font-size:10.5px; font-weight:500; letter-spacing:.03em; text-transform:uppercase; padding:6px 10px; border-radius:3px; border:1px solid var(--line); background:transparent; color:var(--ink-soft); cursor:pointer; }
+  .tab.active{ background:var(--gold); border-color:var(--gold); color:var(--paper); }
+  .card{ background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:18px 16px; box-shadow:0 1px 3px rgba(35,43,59,.08); animation:cardIn .35s ease; }
+  @keyframes cardIn{ from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);} }
+  .eyebrow{ display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:10.5px; color:var(--ink-soft); margin-bottom:16px; flex-wrap:wrap; }
+  .eyebrowTag{ text-transform:uppercase; letter-spacing:.05em; border:1px solid var(--line); border-radius:3px; padding:3px 7px; white-space:nowrap; }
+  .sentence{ font-size:19px; line-height:1.38; margin:0; word-break:break-word; }
+  .divider{ border-top:1px dashed var(--line); margin:16px 0; }
+  .btn{ font-size:12px; font-weight:500; letter-spacing:.03em; text-transform:uppercase; padding:10px 16px; border-radius:3px; cursor:pointer; border:1px solid var(--gold); background:transparent; color:var(--gold); width:100%; }
+  .btn.filled{ background:var(--gold); color:var(--paper); }
+  .btnRow{ display:flex; gap:8px; margin-top:2px; }
+  .btnRow .btnTeal, .btnRow .btnBrick{ flex:1; }
+  .btnTeal{ font-size:12.5px; font-weight:500; padding:10px 12px; border-radius:3px; cursor:pointer; border:1px solid var(--teal); background:var(--teal); color:var(--paper); }
+  .btnBrick{ font-size:12.5px; font-weight:500; padding:10px 12px; border-radius:3px; cursor:pointer; border:1px solid var(--brick); background:transparent; color:var(--brick); }
+  .infWrap{ margin-bottom:14px; }
+  .infWord{ font-size:16px; font-weight:600; }
+  .infGloss{ font-size:12px; color:var(--ink-soft); font-family:'Inter',sans-serif; margin-left:6px; display:block; margin-top:2px; }
+  .stamp{ display:inline-block; font-size:19px; text-transform:uppercase; letter-spacing:.06em; padding:7px 12px; border:2px solid var(--ink); transform:rotate(-1.5deg); margin-bottom:16px; animation:stampIn .3s cubic-bezier(.34,1.56,.64,1); max-width:100%; overflow-wrap:break-word; }
+  @keyframes stampIn{ from{opacity:0; transform:scale(.85) rotate(-2deg);} to{opacity:1; transform:scale(1) rotate(-1.5deg);} }
+  .tableWrap{ margin-top:20px; padding-top:16px; border-top:1px dashed var(--line); }
+  .tableTitle{ font-size:10px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); margin-bottom:8px; }
+  .tableScroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; margin:0 -16px; padding:0 16px; }
+  table{ width:100%; min-width:420px; border-collapse:collapse; font-size:11px; }
+  th{ text-align:left; padding:0 6px 5px 0; color:var(--ink-soft); font-weight:400; text-transform:uppercase; letter-spacing:.03em; white-space:nowrap; }
+  td{ padding:4px 6px 4px 0; white-space:nowrap; }
+  tr.trow{ border-top:1px solid var(--line); }
+  .cmdRow{ display:flex; flex-wrap:wrap; gap:6px 16px; font-size:11.5px; margin-top:12px; }
+  .skipLink{ display:block; text-align:center; font-size:12px; color:var(--ink-soft); text-decoration:underline; margin-top:18px; background:none; border:none; cursor:pointer; padding:6px; width:100%; }
+  .feedbackBox{ text-align:center; margin-top:18px; }
+  .speakBtn{ display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; border-radius:50%; border:1px solid var(--line); background:transparent; cursor:pointer; font-size:13px; vertical-align:middle; padding:0; line-height:1; }
+  .speakBtn:hover{ border-color:var(--teal); }
+  .speakBtn.small{ width:20px; height:20px; font-size:10px; margin-left:6px; }
+  .feedbackBox a{ font-size:12px; color:var(--ink-soft); text-decoration:underline; }
+  .feedbackNote{ margin-top:10px; font-size:12px; color:var(--ink-soft); }
+  .feedbackNote summary{ cursor:pointer; list-style:none; text-decoration:underline; }
+  .feedbackNote summary::-webkit-details-marker{ display:none; }
+  .feedbackNote p{ margin:10px auto 0; max-width:420px; line-height:1.55; text-align:left; }
+  .loading{ text-align:center; padding:60px 0; color:var(--ink-soft); font-size:14px; }
+  button:focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
+  @media (prefers-reduced-motion: reduce){ .card,.stamp{ animation:none; } }
+
+  /* scale up comfortably on tablets/desktop */
+  @media (min-width: 640px){
+    .wrap{ padding:40px 16px 56px; }
+    h1{ font-size:28px; }
+    .subtitle{ font-size:14px; }
+    .statLine{ font-size:12px; }
+    .tabs{ gap:8px; margin:20px 0 18px; }
+    .tab{ font-size:12px; padding:6px 12px; }
+    .card{ padding:28px 26px; }
+    .eyebrow{ font-size:12px; margin-bottom:22px; }
+    .eyebrowTag{ padding:4px 8px; }
+    .sentence{ font-size:25px; }
+    .divider{ margin:22px 0; }
+    .btn{ font-size:13px; padding:10px 20px; width:auto; }
+    .btnTeal, .btnBrick{ font-size:13px; padding:9px 16px; }
+    .infWord{ font-size:18px; }
+    .infGloss{ font-size:13px; display:inline; margin-top:0; }
+    .stamp{ font-size:24px; padding:8px 16px; margin-bottom:22px; }
+    .tableWrap{ margin-top:26px; padding-top:20px; }
+    .tableTitle{ font-size:11px; margin-bottom:10px; }
+    .tableScroll{ margin:0; padding:0; }
+    table{ font-size:12px; }
+    th{ padding:0 8px 6px 0; }
+    td{ padding:5px 8px 5px 0; }
+    .cmdRow{ font-size:12px; margin-top:14px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="headerRow">
+    <h1 class="display">Verbario</h1>
+    <div class="statLine mono" id="statLine">11 seen · 73% got it · 2 due for review</div>
+  </div>
+  <p class="subtitle" id="subtitle">100 essential Spanish verbs, spaced out with a Leitner box, synced to your Drive.</p>
+
+  <div class="modeTabs" id="modeTabs"><button class="tab active" data-action="setMode" data-mode="verbs">VERBS</button><button class="tab" data-action="setMode" data-mode="phrases">PHRASES</button></div>
+
+  <div class="tabs" id="tabs"><button class="tab active" data-action="toggleCat" data-key="present" title="Presente">PRES</button><button class="tab active" data-action="toggleCat" data-key="preterite" title="Pretérito">PRET</button><button class="tab active" data-action="toggleCat" data-key="imperfect" title="Imperfecto">IMPF</button><button class="tab active" data-action="toggleCat" data-key="future" title="Futuro">FUT</button><button class="tab active" data-action="toggleCat" data-key="impInformal" title="Mandato informal">INFORMAL</button><button class="tab active" data-action="toggleCat" data-key="impFormal" title="Mandato formal">FORMAL</button></div>
+  <div class="tabs" id="levelTabs" style="display:none"></div>
+  <div class="tabs" id="subjectTabs" style="display:none"></div>
+
+  <div id="cardHost"><div class="card"><div class="eyebrow"><span class="mono">No. 001</span><span class="eyebrowTag mono">Pretérito · vosotros</span></div><p class="sentence display">Yesterday, You all chose.</p><div class="divider"></div><button class="btn" data-action="showInf">Show infinitive</button></div></div>
+
+  <button class="skipLink" id="skipBtn" style="display: block;">Skip this card</button>
+
+  <div class="feedbackBox">
+    <a href="mailto:Mh.nofallah@gmail.com">Mh.nofallah@gmail.com</a>
+    <details class="feedbackNote">
+      <summary>A note from Mohammad</summary>
+      <p>¡Hola! I'm Mohammad — also new to learning Spanish myself, and I designed this app to help me learn. I'd love to hear your feedback or comments on how to improve or extend it. Please reach out and tell me how we can make it even better. And if you'd like the newer version of the app, just contact me directly and I'll send it your way!</p>
+    </details>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   CONJUGATION ENGINE
+   ============================================================ */
+const ENDINGS = {
+  present: { ar:["o","as","a","amos","áis","an"], er:["o","es","e","emos","éis","en"], ir:["o","es","e","imos","ís","en"] },
+  preterite: { ar:["é","aste","ó","amos","asteis","aron"], er:["í","iste","ió","imos","isteis","ieron"], ir:["í","iste","ió","imos","isteis","ieron"] },
+  imperfect: { ar:["aba","abas","aba","ábamos","abais","aban"], er:["ía","ías","ía","íamos","íais","ían"], ir:["ía","ías","ía","íamos","íais","ían"] },
+  future: ["é","ás","á","emos","éis","án"],
+};
+function changeStem(stem, pattern){
+  const ch = pattern[0]; const repl = pattern.split("-")[1];
+  const i = stem.lastIndexOf(ch);
+  if(i===-1) return stem;
+  return stem.slice(0,i)+repl+stem.slice(i+1);
+}
+function fixSpelling(stem){
+  if(stem.endsWith("c")) return stem.slice(0,-1)+"qu";
+  if(stem.endsWith("g")) return stem.slice(0,-1)+"gu";
+  if(stem.endsWith("z")) return stem.slice(0,-1)+"c";
+  return stem;
+}
+function conjugate(v, tense, idx){
+  const root = v.inf.slice(0,-2);
+  const irr = v.irregular || {};
+  if(irr[tense] && irr[tense][idx]!==undefined) return irr[tense][idx];
+  if(tense==="future"){ const stem = irr.futureStem || v.inf; return stem + ENDINGS.future[idx]; }
+  if(tense==="present"){
+    let stem = root;
+    if(v.stemChange && (idx===0||idx===1||idx===2||idx===5)) stem = changeStem(root, v.stemChange);
+    return stem + ENDINGS.present[v.type][idx];
+  }
+  if(tense==="preterite"){
+    let stem = root;
+    if(v.preteriteChange && (idx===2||idx===5)) stem = changeStem(root, v.preteriteChange);
+    if(v.type==="ar" && idx===0) stem = fixSpelling(stem);
+    return stem + ENDINGS.preterite[v.type][idx];
+  }
+  if(tense==="imperfect") return root + ENDINGS.imperfect[v.type][idx];
+}
+function tuCommand(v){
+  const irr = v.irregular || {};
+  if(irr.tuCommand) return irr.tuCommand;
+  return conjugate(v,"present",2);
+}
+function vosotrosCommand(v){
+  if(v.inf==="ir") return "id";
+  const root = v.inf.slice(0,-2);
+  return root + (v.type==="ar"?"ad":v.type==="er"?"ed":"id");
+}
+function formalCommand(v, key){
+  const irr = v.irregular || {};
+  if(irr.formalCommand && irr.formalCommand[key]) return irr.formalCommand[key];
+  const yo = conjugate(v,"present",0);
+  let stem = yo.slice(0,-1);
+  const endMap = v.type==="ar" ? {usted:"e",ustedes:"en"} : {usted:"a",ustedes:"an"};
+  if(v.type==="ar") stem = fixSpelling(stem);
+  return stem+endMap[key];
+}
+
+/* ============================================================
+   ENGLISH SENTENCE CONJUGATION
+   ============================================================ */
+function deriveEnBase(en){ return en.replace(/^to\s+/i,"").split(/[\/(]/)[0].trim(); }
+function splitVerb(base){ const parts=base.split(" "); return {head:parts[0], tail:parts.slice(1).join(" ")}; }
+function defaultPres3(base){
+  const {head,tail}=splitVerb(base); let h;
+  if(/[osxz]$/.test(head) || /[cs]h$/.test(head)) h=head+"es";
+  else if(/[^aeiou]y$/.test(head)) h=head.slice(0,-1)+"ies";
+  else h=head+"s";
+  return tail? h+" "+tail : h;
+}
+function defaultPast(base){
+  const {head,tail}=splitVerb(base); let h;
+  if(head.endsWith("e")) h=head+"d";
+  else if(/[^aeiou]y$/.test(head)) h=head.slice(0,-1)+"ied";
+  else h=head+"ed";
+  return tail? h+" "+tail : h;
+}
+const EN_OVERRIDES = {
+  haber:{pres3:'has',past:'had'}, tener:{pres3:'has',past:'had'}, hacer:{past:'made'},
+  decir:{past:'said'}, poner:{past:'put'}, saber:{past:'knew'}, venir:{past:'came'},
+  dar:{past:'gave'}, ver:{past:'saw'}, salir:{past:'left'}, traer:{past:'brought'},
+  'oír':{past:'heard'}, caer:{past:'fell'}, conocer:{past:'knew'}, crecer:{past:'grew'},
+  conducir:{past:'drove'}, leer:{past:'read'}, construir:{past:'built'}, huir:{past:'fled'},
+  elegir:{past:'chose'}, encontrar:{past:'found'}, volar:{past:'flew'}, sentir:{past:'felt'},
+  dormir:{past:'slept'}, preferir:{past:'preferred'}, hablar:{past:'spoke'}, tomar:{past:'took'},
+  ganar:{past:'won'}, comprar:{past:'bought'}, pagar:{past:'paid'}, comer:{past:'ate'},
+  beber:{past:'drank'}, vender:{past:'sold'}, correr:{past:'ran'}, romper:{past:'broke'},
+  escribir:{past:'wrote'},
+};
+function englishForm(verb, tense, idx){
+  const base = verb.enBase || deriveEnBase(verb.en);
+  const isBe = base==="be" || base.startsWith("be ");
+  const rest = isBe ? (base==="be" ? "" : base.slice(3)) : null;
+  const ov = EN_OVERRIDES[verb.inf] || {};
+  if(tense==="present"){
+    if(isBe){ const aux = idx===0?"am":idx===2?"is":"are"; return rest? aux+" "+rest : aux; }
+    if(idx===2) return ov.pres3 || defaultPres3(base);
+    return base;
+  }
+  if(tense==="preterite"){
+    if(isBe){ const aux = (idx===0||idx===2)?"was":"were"; return rest? aux+" "+rest : aux; }
+    return ov.past || defaultPast(base);
+  }
+  if(tense==="imperfect") return "used to "+base;
+  if(tense==="future") return "will "+base;
+  return base;
+}
+
+/* ============================================================
+   100 MOST COMMON VERBS
+   ============================================================ */
+const VERBS = [
+{inf:'ser',en:'to be',type:'er',irregular:{present:['soy','eres','es','somos','sois','son'],preterite:['fui','fuiste','fue','fuimos','fuisteis','fueron'],imperfect:['era','eras','era','éramos','erais','eran'],tuCommand:'sé',formalCommand:{usted:'sea',ustedes:'sean'}}},
+{inf:'estar',en:'to be (location/state)',type:'ar',irregular:{present:['estoy','estás','está','estamos','estáis','están'],preterite:['estuve','estuviste','estuvo','estuvimos','estuvisteis','estuvieron'],formalCommand:{usted:'esté',ustedes:'estén'}}},
+{inf:'ir',en:'to go',type:'ir',irregular:{present:['voy','vas','va','vamos','vais','van'],preterite:['fui','fuiste','fue','fuimos','fuisteis','fueron'],imperfect:['iba','ibas','iba','íbamos','ibais','iban'],tuCommand:'ve',formalCommand:{usted:'vaya',ustedes:'vayan'}}},
+{inf:'haber',en:'to have (auxiliary)',type:'er',noImperative:true,irregular:{present:['he','has','ha','hemos','habéis','han'],preterite:['hube','hubiste','hubo','hubimos','hubisteis','hubieron'],futureStem:'habr'}},
+{inf:'tener',en:'to have',type:'er',stemChange:'e-ie',irregular:{present:{0:'tengo'},preterite:['tuve','tuviste','tuvo','tuvimos','tuvisteis','tuvieron'],futureStem:'tendr',tuCommand:'ten'}},
+{inf:'hacer',en:'to do / to make',type:'er',irregular:{present:{0:'hago'},preterite:['hice','hiciste','hizo','hicimos','hicisteis','hicieron'],futureStem:'har',tuCommand:'haz'}},
+{inf:'decir',en:'to say / to tell',type:'ir',stemChange:'e-i',irregular:{present:{0:'digo'},preterite:['dije','dijiste','dijo','dijimos','dijisteis','dijeron'],futureStem:'dir',tuCommand:'di'}},
+{inf:'poder',en:'to be able to',type:'er',stemChange:'o-ue',irregular:{preterite:['pude','pudiste','pudo','pudimos','pudisteis','pudieron'],futureStem:'podr'}},
+{inf:'poner',en:'to put',type:'er',irregular:{present:{0:'pongo'},preterite:['puse','pusiste','puso','pusimos','pusisteis','pusieron'],futureStem:'pondr',tuCommand:'pon'}},
+{inf:'saber',en:'to know (a fact)',type:'er',irregular:{present:{0:'sé'},preterite:['supe','supiste','supo','supimos','supisteis','supieron'],futureStem:'sabr',formalCommand:{usted:'sepa',ustedes:'sepan'}}},
+{inf:'querer',en:'to want / to love',type:'er',stemChange:'e-ie',irregular:{preterite:['quise','quisiste','quiso','quisimos','quisisteis','quisieron'],futureStem:'querr'}},
+{inf:'venir',en:'to come',type:'ir',stemChange:'e-ie',irregular:{present:{0:'vengo'},preterite:['vine','viniste','vino','vinimos','vinisteis','vinieron'],futureStem:'vendr',tuCommand:'ven'}},
+{inf:'dar',en:'to give',type:'ar',irregular:{present:['doy','das','da','damos','dais','dan'],preterite:['di','diste','dio','dimos','disteis','dieron'],formalCommand:{usted:'dé',ustedes:'den'}}},
+{inf:'ver',en:'to see',type:'er',irregular:{present:{0:'veo'},preterite:['vi','viste','vio','vimos','visteis','vieron'],imperfect:['veía','veías','veía','veíamos','veíais','veían']}},
+{inf:'salir',en:'to leave / to go out',type:'ir',irregular:{present:{0:'salgo'},futureStem:'saldr',tuCommand:'sal'}},
+{inf:'traer',en:'to bring',type:'er',irregular:{present:{0:'traigo'},preterite:['traje','trajiste','trajo','trajimos','trajisteis','trajeron']}},
+{inf:'oír',en:'to hear',type:'ir',irregular:{present:['oigo','oyes','oye','oímos','oís','oyen'],preterite:['oí','oíste','oyó','oímos','oísteis','oyeron']}},
+{inf:'caer',en:'to fall',type:'er',irregular:{present:{0:'caigo'},preterite:['caí','caíste','cayó','caímos','caísteis','cayeron']}},
+{inf:'valer',en:'to be worth',type:'er',irregular:{present:{0:'valgo'},futureStem:'valdr'}},
+{inf:'conocer',en:'to know (a person/place)',type:'er',irregular:{present:{0:'conozco'}}},
+{inf:'parecer',en:'to seem',type:'er',irregular:{present:{0:'parezco'}}},
+{inf:'nacer',en:'to be born',type:'er',irregular:{present:{0:'nazco'}}},
+{inf:'crecer',en:'to grow',type:'er',irregular:{present:{0:'crezco'}}},
+{inf:'producir',en:'to produce',type:'ir',irregular:{present:{0:'produzco'},preterite:['produje','produjiste','produjo','produjimos','produjisteis','produjeron']}},
+{inf:'conducir',en:'to drive',type:'ir',irregular:{present:{0:'conduzco'},preterite:['conduje','condujiste','condujo','condujimos','condujisteis','condujeron']}},
+{inf:'traducir',en:'to translate',type:'ir',irregular:{present:{0:'traduzco'},preterite:['traduje','tradujiste','tradujo','tradujimos','tradujisteis','tradujeron']}},
+{inf:'leer',en:'to read',type:'er',irregular:{preterite:['leí','leíste','leyó','leímos','leísteis','leyeron']}},
+{inf:'creer',en:'to believe',type:'er',irregular:{preterite:['creí','creíste','creyó','creímos','creísteis','creyeron']}},
+{inf:'construir',en:'to build',type:'ir',irregular:{present:['construyo','construyes','construye','construimos','construís','construyen'],preterite:['construí','construiste','construyó','construimos','construisteis','construyeron']}},
+{inf:'huir',en:'to flee',type:'ir',irregular:{present:['huyo','huyes','huye','huimos','huís','huyen'],preterite:['huí','huiste','huyó','huimos','huisteis','huyeron']}},
+{inf:'incluir',en:'to include',type:'ir',irregular:{present:['incluyo','incluyes','incluye','incluimos','incluís','incluyen'],preterite:['incluí','incluiste','incluyó','incluimos','incluisteis','incluyeron']}},
+{inf:'seguir',en:'to follow / to continue',type:'ir',stemChange:'e-i',preteriteChange:'e-i',irregular:{present:['sigo','sigues','sigue','seguimos','seguís','siguen']}},
+{inf:'elegir',en:'to choose',type:'ir',stemChange:'e-i',preteriteChange:'e-i',irregular:{present:{0:'elijo'}}},
+{inf:'corregir',en:'to correct',type:'ir',stemChange:'e-i',preteriteChange:'e-i',irregular:{present:{0:'corrijo'}}},
+{inf:'dirigir',en:'to direct / to manage',type:'ir',irregular:{present:{0:'dirijo'}}},
+{inf:'pensar',en:'to think',type:'ar',stemChange:'e-ie'},
+{inf:'cerrar',en:'to close',type:'ar',stemChange:'e-ie'},
+{inf:'empezar',en:'to start',type:'ar',stemChange:'e-ie'},
+{inf:'entender',en:'to understand',type:'er',stemChange:'e-ie'},
+{inf:'perder',en:'to lose',type:'er',stemChange:'e-ie'},
+{inf:'encender',en:'to turn on / to light',type:'er',stemChange:'e-ie'},
+{inf:'negar',en:'to deny',type:'ar',stemChange:'e-ie'},
+{inf:'volver',en:'to return',type:'er',stemChange:'o-ue'},
+{inf:'contar',en:'to count / to tell',type:'ar',stemChange:'o-ue'},
+{inf:'encontrar',en:'to find',type:'ar',stemChange:'o-ue'},
+{inf:'recordar',en:'to remember',type:'ar',stemChange:'o-ue'},
+{inf:'mover',en:'to move',type:'er',stemChange:'o-ue'},
+{inf:'mostrar',en:'to show',type:'ar',stemChange:'o-ue'},
+{inf:'probar',en:'to try / to taste',type:'ar',stemChange:'o-ue'},
+{inf:'sonar',en:'to sound / to ring',type:'ar',stemChange:'o-ue'},
+{inf:'volar',en:'to fly',type:'ar',stemChange:'o-ue'},
+{inf:'jugar',en:'to play',type:'ar',stemChange:'u-ue'},
+{inf:'pedir',en:'to ask for',type:'ir',stemChange:'e-i',preteriteChange:'e-i'},
+{inf:'servir',en:'to serve',type:'ir',stemChange:'e-i',preteriteChange:'e-i'},
+{inf:'repetir',en:'to repeat',type:'ir',stemChange:'e-i',preteriteChange:'e-i'},
+{inf:'medir',en:'to measure',type:'ir',stemChange:'e-i',preteriteChange:'e-i'},
+{inf:'vestir',en:'to dress',type:'ir',stemChange:'e-i',preteriteChange:'e-i'},
+{inf:'sentir',en:'to feel',type:'ir',stemChange:'e-ie',preteriteChange:'e-i'},
+{inf:'dormir',en:'to sleep',type:'ir',stemChange:'o-ue',preteriteChange:'o-u'},
+{inf:'morir',en:'to die',type:'ir',stemChange:'o-ue',preteriteChange:'o-u'},
+{inf:'mentir',en:'to lie',type:'ir',stemChange:'e-ie',preteriteChange:'e-i'},
+{inf:'preferir',en:'to prefer',type:'ir',stemChange:'e-ie',preteriteChange:'e-i'},
+{inf:'hablar',en:'to speak',type:'ar'},
+{inf:'trabajar',en:'to work',type:'ar'},
+{inf:'estudiar',en:'to study',type:'ar'},
+{inf:'llegar',en:'to arrive',type:'ar'},
+{inf:'llevar',en:'to carry / to wear',type:'ar'},
+{inf:'tomar',en:'to take / to drink',type:'ar'},
+{inf:'buscar',en:'to look for',type:'ar'},
+{inf:'mirar',en:'to look / to watch',type:'ar'},
+{inf:'escuchar',en:'to listen',type:'ar'},
+{inf:'esperar',en:'to wait / to hope',type:'ar'},
+{inf:'necesitar',en:'to need',type:'ar'},
+{inf:'ayudar',en:'to help',type:'ar'},
+{inf:'usar',en:'to use',type:'ar'},
+{inf:'cambiar',en:'to change',type:'ar'},
+{inf:'preguntar',en:'to ask',type:'ar'},
+{inf:'explicar',en:'to explain',type:'ar'},
+{inf:'terminar',en:'to finish',type:'ar'},
+{inf:'ganar',en:'to win / to earn',type:'ar'},
+{inf:'viajar',en:'to travel',type:'ar'},
+{inf:'cocinar',en:'to cook',type:'ar'},
+{inf:'comprar',en:'to buy',type:'ar'},
+{inf:'pagar',en:'to pay',type:'ar'},
+{inf:'tocar',en:'to touch / to play (instrument)',type:'ar'},
+{inf:'caminar',en:'to walk',type:'ar'},
+{inf:'comer',en:'to eat',type:'er'},
+{inf:'beber',en:'to drink',type:'er'},
+{inf:'aprender',en:'to learn',type:'er'},
+{inf:'vender',en:'to sell',type:'er'},
+{inf:'correr',en:'to run',type:'er'},
+{inf:'deber',en:'to owe / should',type:'er'},
+{inf:'romper',en:'to break',type:'er'},
+{inf:'vivir',en:'to live',type:'ir'},
+{inf:'escribir',en:'to write',type:'ir'},
+{inf:'abrir',en:'to open',type:'ir'},
+{inf:'decidir',en:'to decide',type:'ir'},
+{inf:'permitir',en:'to allow',type:'ir'},
+{inf:'recibir',en:'to receive',type:'ir'},
+{inf:'describir',en:'to describe',type:'ir'},
+];
+
+/* ============================================================
+   200 COMMON DAILY PHRASES
+   ============================================================ */
+const PHRASES = [
+{id:1,en:"Hello",es:"Hola"},{id:2,en:"Good morning",es:"Buenos días"},{id:3,en:"Good afternoon",es:"Buenas tardes"},{id:4,en:"Good evening / night",es:"Buenas noches"},{id:5,en:"How are you?",es:"¿Cómo estás?"},{id:6,en:"I'm fine, thanks",es:"Estoy bien, gracias"},{id:7,en:"And you?",es:"¿Y tú?"},{id:8,en:"Nice to meet you",es:"Mucho gusto"},{id:9,en:"What's your name?",es:"¿Cómo te llamas?"},{id:10,en:"My name is...",es:"Me llamo..."},
+{id:11,en:"Please",es:"Por favor"},{id:12,en:"Thank you",es:"Gracias"},{id:13,en:"Thank you very much",es:"Muchas gracias"},{id:14,en:"You're welcome",es:"De nada"},{id:15,en:"Excuse me",es:"Perdón"},{id:16,en:"I'm sorry",es:"Lo siento"},{id:17,en:"Goodbye",es:"Adiós"},{id:18,en:"See you later",es:"Hasta luego"},{id:19,en:"See you tomorrow",es:"Hasta mañana"},{id:20,en:"Take care",es:"Cuídate"},
+{id:21,en:"I need help",es:"Necesito ayuda"},{id:22,en:"Can you help me?",es:"¿Puedes ayudarme?"},{id:23,en:"I don't understand",es:"No entiendo"},{id:24,en:"Can you repeat that?",es:"¿Puedes repetirlo?"},{id:25,en:"Can you speak more slowly?",es:"¿Puedes hablar más despacio?"},{id:26,en:"I don't speak Spanish well",es:"No hablo bien español"},{id:27,en:"Do you speak English?",es:"¿Hablas inglés?"},{id:28,en:"What does this mean?",es:"¿Qué significa esto?"},{id:29,en:"How do you say...?",es:"¿Cómo se dice...?"},{id:30,en:"I'm looking for...",es:"Estoy buscando..."},
+{id:31,en:"Where is the bathroom?",es:"¿Dónde está el baño?"},{id:32,en:"I'm lost",es:"Estoy perdido"},{id:33,en:"Can you show me?",es:"¿Puedes mostrarme?"},{id:34,en:"I need a doctor",es:"Necesito un médico"},{id:35,en:"Call the police",es:"Llama a la policía"},{id:36,en:"It's an emergency",es:"Es una emergencia"},{id:37,en:"I'm hungry",es:"Tengo hambre"},{id:38,en:"I'm thirsty",es:"Tengo sed"},{id:39,en:"I'm tired",es:"Estoy cansado"},{id:40,en:"I'm cold",es:"Tengo frío"},
+{id:41,en:"What time is it?",es:"¿Qué hora es?"},{id:42,en:"What day is it today?",es:"¿Qué día es hoy?"},{id:43,en:"Where are you from?",es:"¿De dónde eres?"},{id:44,en:"How old are you?",es:"¿Cuántos años tienes?"},{id:45,en:"Where do you live?",es:"¿Dónde vives?"},{id:46,en:"How far is it?",es:"¿Qué tan lejos está?"},{id:47,en:"Turn left",es:"Gira a la izquierda"},{id:48,en:"Turn right",es:"Gira a la derecha"},{id:49,en:"Go straight ahead",es:"Sigue derecho"},{id:50,en:"It's near here",es:"Está cerca de aquí"},
+{id:51,en:"It's far from here",es:"Está lejos de aquí"},{id:52,en:"How do I get to...?",es:"¿Cómo llego a...?"},{id:53,en:"Is it open?",es:"¿Está abierto?"},{id:54,en:"Is it closed?",es:"¿Está cerrado?"},{id:55,en:"What time does it open?",es:"¿A qué hora abre?"},{id:56,en:"What time does it close?",es:"¿A qué hora cierra?"},{id:57,en:"How long does it take?",es:"¿Cuánto tiempo tarda?"},{id:58,en:"Where can I find a taxi?",es:"¿Dónde puedo encontrar un taxi?"},{id:59,en:"Where is the bus station?",es:"¿Dónde está la estación de autobuses?"},{id:60,en:"Which way is it?",es:"¿Por dónde es?"},
+{id:61,en:"How much is it?",es:"¿Cuánto cuesta?"},{id:62,en:"It's too expensive",es:"Es muy caro"},{id:63,en:"Do you have this in another size?",es:"¿Tienes esto en otra talla?"},{id:64,en:"Can I try it on?",es:"¿Puedo probármelo?"},{id:65,en:"I'll take it",es:"Me lo llevo"},{id:66,en:"Do you accept credit cards?",es:"¿Aceptan tarjetas de crédito?"},{id:67,en:"Where can I pay?",es:"¿Dónde puedo pagar?"},{id:68,en:"Can I have the receipt?",es:"¿Puedo tener el recibo?"},{id:69,en:"Do you have change?",es:"¿Tienes cambio?"},{id:70,en:"What's the price?",es:"¿Cuál es el precio?"},
+{id:71,en:"Is there a discount?",es:"¿Hay descuento?"},{id:72,en:"I'm just looking",es:"Solo estoy mirando"},{id:73,en:"Can I return this?",es:"¿Puedo devolver esto?"},{id:74,en:"Where is the nearest store?",es:"¿Dónde está la tienda más cercana?"},{id:75,en:"Do you have this in another color?",es:"¿Tienes esto en otro color?"},{id:76,en:"I'm looking for a gift",es:"Estoy buscando un regalo"},{id:77,en:"Can you gift wrap it?",es:"¿Puedes envolverlo para regalo?"},{id:78,en:"What time do you close?",es:"¿A qué hora cierran?"},{id:79,en:"Is this on sale?",es:"¿Esto está en oferta?"},{id:80,en:"Do you deliver?",es:"¿Hacen entregas?"},
+{id:81,en:"I'd like a table for two",es:"Quiero una mesa para dos"},{id:82,en:"Can I see the menu?",es:"¿Puedo ver el menú?"},{id:83,en:"What do you recommend?",es:"¿Qué recomiendas?"},{id:84,en:"I'll have this",es:"Voy a pedir esto"},{id:85,en:"I'm allergic to...",es:"Soy alérgico a..."},{id:86,en:"I'm vegetarian",es:"Soy vegetariano"},{id:87,en:"The check, please",es:"La cuenta, por favor"},{id:88,en:"It was delicious",es:"Estaba delicioso"},{id:89,en:"Can I get some water?",es:"¿Puedo tener agua?"},{id:90,en:"Is this spicy?",es:"¿Esto es picante?"},
+{id:91,en:"Without onions, please",es:"Sin cebolla, por favor"},{id:92,en:"Can I order to go?",es:"¿Puedo pedirlo para llevar?"},{id:93,en:"Do you have a table available?",es:"¿Tienen una mesa disponible?"},{id:94,en:"I'm still deciding",es:"Todavía estoy decidiendo"},{id:95,en:"Can we split the bill?",es:"¿Podemos dividir la cuenta?"},{id:96,en:"What's in this dish?",es:"¿Qué lleva este plato?"},{id:97,en:"I'll have the same",es:"Voy a pedir lo mismo"},{id:98,en:"Enjoy your meal",es:"Buen provecho"},{id:99,en:"Can I have a napkin?",es:"¿Puedo tener una servilleta?"},{id:100,en:"It's not what I ordered",es:"No es lo que pedí"},
+{id:101,en:"What are you doing today?",es:"¿Qué haces hoy?"},{id:102,en:"See you at seven",es:"Nos vemos a las siete"},{id:103,en:"I have a meeting",es:"Tengo una reunión"},{id:104,en:"I'm running late",es:"Voy tarde"},{id:105,en:"Let's meet tomorrow",es:"Nos vemos mañana"},{id:106,en:"What's your schedule?",es:"¿Cuál es tu horario?"},{id:107,en:"I'm free this afternoon",es:"Estoy libre esta tarde"},{id:108,en:"I'm busy right now",es:"Estoy ocupado ahora"},{id:109,en:"Can we reschedule?",es:"¿Podemos reprogramar?"},{id:110,en:"I have to go now",es:"Tengo que irme ahora"},
+{id:111,en:"Wait for me, please",es:"Espérame, por favor"},{id:112,en:"I'll be right back",es:"Ya vuelvo"},{id:113,en:"What day works for you?",es:"¿Qué día te viene bien?"},{id:114,en:"Let's go",es:"Vamos"},{id:115,en:"Hurry up",es:"Apúrate"},{id:116,en:"Take your time",es:"Tómate tu tiempo"},{id:117,en:"I'm on my way",es:"Voy en camino"},{id:118,en:"I just arrived",es:"Acabo de llegar"},{id:119,en:"See you soon",es:"Nos vemos pronto"},{id:120,en:"Have a good day",es:"Que tengas un buen día"},
+{id:121,en:"I'm happy",es:"Estoy feliz"},{id:122,en:"I'm sad",es:"Estoy triste"},{id:123,en:"I'm worried",es:"Estoy preocupado"},{id:124,en:"I'm excited",es:"Estoy emocionado"},{id:125,en:"I'm nervous",es:"Estoy nervioso"},{id:126,en:"I like it",es:"Me gusta"},{id:127,en:"I don't like it",es:"No me gusta"},{id:128,en:"I love it",es:"Me encanta"},{id:129,en:"I think so",es:"Creo que sí"},{id:130,en:"I don't think so",es:"Creo que no"},
+{id:131,en:"I agree",es:"Estoy de acuerdo"},{id:132,en:"I disagree",es:"No estoy de acuerdo"},{id:133,en:"That's a good idea",es:"Es una buena idea"},{id:134,en:"I'm not sure",es:"No estoy seguro"},{id:135,en:"It doesn't matter",es:"No importa"},{id:136,en:"It's fine",es:"Está bien"},{id:137,en:"That's amazing",es:"Eso es increíble"},{id:138,en:"I'm proud of you",es:"Estoy orgulloso de ti"},{id:139,en:"Don't worry",es:"No te preocupes"},{id:140,en:"Congratulations",es:"Felicidades"},
+{id:141,en:"I work from home",es:"Trabajo desde casa"},{id:142,en:"What's your job?",es:"¿A qué te dedicas?"},{id:143,en:"I have a job interview",es:"Tengo una entrevista de trabajo"},{id:144,en:"Send me an email",es:"Envíame un correo"},{id:145,en:"Can you send me the file?",es:"¿Puedes enviarme el archivo?"},{id:146,en:"My phone is out of battery",es:"Mi teléfono se quedó sin batería"},{id:147,en:"I lost my password",es:"Perdí mi contraseña"},{id:148,en:"Can you turn on the wifi?",es:"¿Puedes encender el wifi?"},{id:149,en:"I need to charge my phone",es:"Necesito cargar mi teléfono"},{id:150,en:"Let's schedule a call",es:"Programemos una llamada"},
+{id:151,en:"I'll send it right away",es:"Lo envío enseguida"},{id:152,en:"The internet isn't working",es:"El internet no funciona"},{id:153,en:"Can you check your email?",es:"¿Puedes revisar tu correo?"},{id:154,en:"I'm working on it",es:"Estoy trabajando en eso"},{id:155,en:"Let me know when you're ready",es:"Avísame cuando estés listo"},{id:156,en:"I have a deadline tomorrow",es:"Tengo una fecha límite mañana"},{id:157,en:"Can we talk later?",es:"¿Podemos hablar más tarde?"},{id:158,en:"I'll call you back",es:"Te devuelvo la llamada"},{id:159,en:"What's the wifi password?",es:"¿Cuál es la contraseña del wifi?"},{id:160,en:"My computer crashed",es:"Mi computadora se bloqueó"},
+{id:161,en:"This is my wife",es:"Esta es mi esposa"},{id:162,en:"This is my husband",es:"Este es mi esposo"},{id:163,en:"This is my daughter",es:"Esta es mi hija"},{id:164,en:"This is my son",es:"Este es mi hijo"},{id:165,en:"These are my parents",es:"Estos son mis padres"},{id:166,en:"I have two children",es:"Tengo dos hijos"},{id:167,en:"Do you have siblings?",es:"¿Tienes hermanos?"},{id:168,en:"We're married",es:"Estamos casados"},{id:169,en:"I miss my family",es:"Extraño a mi familia"},{id:170,en:"Let's have dinner together",es:"Cenemos juntos"},
+{id:171,en:"You're invited",es:"Estás invitado"},{id:172,en:"Thanks for having me",es:"Gracias por invitarme"},{id:173,en:"Make yourself at home",es:"Siéntete como en casa"},{id:174,en:"It was great to see you",es:"Fue genial verte"},{id:175,en:"Let's stay in touch",es:"Sigamos en contacto"},{id:176,en:"Give my regards to your family",es:"Saludos a tu familia"},{id:177,en:"I'd love to come",es:"Me encantaría ir"},{id:178,en:"Can I bring something?",es:"¿Puedo traer algo?"},{id:179,en:"Thanks for the invitation",es:"Gracias por la invitación"},{id:180,en:"We had a great time",es:"La pasamos muy bien"},
+{id:181,en:"It's hot today",es:"Hace calor hoy"},{id:182,en:"It's cold today",es:"Hace frío hoy"},{id:183,en:"It's raining",es:"Está lloviendo"},{id:184,en:"It's sunny",es:"Hace sol"},{id:185,en:"I have a headache",es:"Tengo dolor de cabeza"},{id:186,en:"I don't feel well",es:"No me siento bien"},{id:187,en:"I need to rest",es:"Necesito descansar"},{id:188,en:"I have a cold",es:"Tengo un resfriado"},{id:189,en:"Take care of yourself",es:"Cuídate mucho"},{id:190,en:"Get well soon",es:"Que te mejores"},
+{id:191,en:"I'm allergic to nuts",es:"Soy alérgico a los frutos secos"},{id:192,en:"Where's the nearest pharmacy?",es:"¿Dónde está la farmacia más cercana?"},{id:193,en:"I need a prescription",es:"Necesito una receta"},{id:194,en:"Drink some water",es:"Bebe agua"},{id:195,en:"It's going to be okay",es:"Todo va a estar bien"},{id:196,en:"No worries",es:"No hay problema"},{id:197,en:"Good luck",es:"Buena suerte"},{id:198,en:"Welcome",es:"Bienvenido"},{id:199,en:"Let's celebrate",es:"Celebremos"},{id:200,en:"Life is good",es:"La vida es buena"},
+];
+PHRASES.forEach(function(p,i){ p.level = i<100 ? 'A1' : 'A2'; });
+
+const PHRASES_B11 = [
+{id:201,en:"I think it would be better to leave early",es:"Creo que sería mejor salir temprano"},{id:202,en:"Although it's raining, we're going out",es:"Aunque está lloviendo, vamos a salir"},{id:203,en:"If I have time, I'll call you",es:"Si tengo tiempo, te llamaré"},{id:204,en:"I would like to know more about this",es:"Me gustaría saber más sobre esto"},{id:205,en:"He told me that he was busy",es:"Me dijo que estaba ocupado"},{id:206,en:"She asked me to wait a moment",es:"Me pidió que esperara un momento"},{id:207,en:"I'm not sure if I can come",es:"No estoy seguro si puedo venir"},{id:208,en:"It seems like it's going to rain",es:"Parece que va a llover"},{id:209,en:"As soon as I finish, I'll let you know",es:"En cuanto termine, te aviso"},{id:210,en:"Even though I'm tired, I'll keep working",es:"Aunque estoy cansado, seguiré trabajando"},
+{id:211,en:"I used to live in Madrid",es:"Antes vivía en Madrid"},{id:212,en:"We were talking when you called",es:"Estábamos hablando cuando llamaste"},{id:213,en:"I have never been to Peru",es:"Nunca he estado en Perú"},{id:214,en:"Have you finished your homework yet?",es:"¿Ya terminaste la tarea?"},{id:215,en:"I've already eaten, thank you",es:"Ya comí, gracias"},{id:216,en:"By the time I arrived, they had left",es:"Cuando llegué, ya se habían ido"},{id:217,en:"I would love to travel more",es:"Me encantaría viajar más"},{id:218,en:"If I were you, I would rest",es:"Si yo fuera tú, descansaría"},{id:219,en:"It's important that you arrive on time",es:"Es importante que llegues a tiempo"},{id:220,en:"I hope you feel better soon",es:"Espero que te sientas mejor pronto"},
+{id:221,en:"I doubt he knows the answer",es:"Dudo que él sepa la respuesta"},{id:222,en:"It's possible that it will rain tomorrow",es:"Es posible que llueva mañana"},{id:223,en:"I'm glad you came",es:"Me alegra que hayas venido"},{id:224,en:"Let's hope everything goes well",es:"Esperemos que todo salga bien"},{id:225,en:"I suggest you talk to him",es:"Te sugiero que hables con él"},{id:226,en:"He recommended that I try this restaurant",es:"Me recomendó que probara este restaurante"},{id:227,en:"Whatever you decide is fine with me",es:"Lo que decidas está bien para mí"},{id:228,en:"Whoever arrives first can choose the table",es:"Quien llegue primero puede elegir la mesa"},{id:229,en:"I need you to send me the report",es:"Necesito que me envíes el informe"},{id:230,en:"Can you tell me what happened?",es:"¿Puedes decirme qué pasó?"},
+{id:231,en:"I don't know where he went",es:"No sé adónde fue"},{id:232,en:"I wonder what time it is",es:"Me pregunto qué hora es"},{id:233,en:"This is the best restaurant I've been to",es:"Este es el mejor restaurante al que he ido"},{id:234,en:"That's the person who helped me yesterday",es:"Esa es la persona que me ayudó ayer"},{id:235,en:"This is the book I was telling you about",es:"Este es el libro del que te hablaba"},{id:236,en:"The more I practice, the better I get",es:"Cuanto más practico, mejor me sale"},{id:237,en:"The sooner we start, the sooner we finish",es:"Cuanto antes empecemos, antes terminamos"},{id:238,en:"I prefer tea over coffee",es:"Prefiero el té al café"},{id:239,en:"I'd rather stay home tonight",es:"Prefiero quedarme en casa esta noche"},{id:240,en:"It depends on the weather",es:"Depende del clima"},
+{id:241,en:"It's up to you",es:"Depende de ti"},{id:242,en:"On the other hand, it could work",es:"Por otro lado, podría funcionar"},{id:243,en:"In my opinion, it's a good plan",es:"En mi opinión, es un buen plan"},{id:244,en:"From my point of view, that's not fair",es:"Desde mi punto de vista, eso no es justo"},{id:245,en:"As far as I know, the store is open",es:"Que yo sepa, la tienda está abierta"},{id:246,en:"To be honest, I don't like it",es:"Para ser honesto, no me gusta"},{id:247,en:"In fact, I already knew that",es:"De hecho, ya lo sabía"},{id:248,en:"By the way, did you call your mother?",es:"Por cierto, ¿llamaste a tu madre?"},{id:249,en:"Actually, I changed my mind",es:"En realidad, cambié de opinión"},{id:250,en:"In the end, everything worked out",es:"Al final, todo salió bien"},
+{id:251,en:"First of all, let's plan the trip",es:"Primero que todo, planeemos el viaje"},{id:252,en:"Finally, we reached an agreement",es:"Finalmente, llegamos a un acuerdo"},{id:253,en:"Meanwhile, I'll finish the paperwork",es:"Mientras tanto, terminaré el papeleo"},{id:254,en:"Since you're here, let's talk",es:"Ya que estás aquí, hablemos"},{id:255,en:"Because of the traffic, I arrived late",es:"Por el tráfico, llegué tarde"},{id:256,en:"Due to the rain, the event was cancelled",es:"Debido a la lluvia, el evento se canceló"},{id:257,en:"In spite of everything, we finished on time",es:"A pesar de todo, terminamos a tiempo"},{id:258,en:"Instead of driving, we walked",es:"En lugar de conducir, caminamos"},{id:259,en:"Before leaving, check the door",es:"Antes de salir, revisa la puerta"},{id:260,en:"After eating, we went for a walk",es:"Después de comer, salimos a caminar"},
+{id:261,en:"While I was cooking, the phone rang",es:"Mientras cocinaba, sonó el teléfono"},{id:262,en:"As soon as she saw me, she smiled",es:"En cuanto me vio, sonrió"},{id:263,en:"Once you finish, let me know",es:"Una vez que termines, avísame"},{id:264,en:"Until you call me, I won't leave",es:"Hasta que me llames, no me iré"},{id:265,en:"Unless it rains, we'll go to the park",es:"A menos que llueva, iremos al parque"},{id:266,en:"I'll wait here in case you need me",es:"Esperaré aquí por si me necesitas"},{id:267,en:"So that you understand, I'll explain it again",es:"Para que entiendas, lo explicaré otra vez"},{id:268,en:"I'm calling to confirm our appointment",es:"Llamo para confirmar nuestra cita"},{id:269,en:"I'm writing to ask about the job",es:"Escribo para preguntar sobre el trabajo"},{id:270,en:"Could you explain that again, please?",es:"¿Podrías explicar eso de nuevo, por favor?"},
+{id:271,en:"Would you mind closing the window?",es:"¿Te importaría cerrar la ventana?"},{id:272,en:"Would you like to join us for dinner?",es:"¿Te gustaría acompañarnos a cenar?"},{id:273,en:"I was wondering if you could help me",es:"Me preguntaba si podrías ayudarme"},{id:274,en:"I appreciate you taking the time",es:"Agradezco que te hayas tomado el tiempo"},{id:275,en:"Thanks for letting me know",es:"Gracias por avisarme"},{id:276,en:"I apologize for the delay",es:"Me disculpo por la demora"},{id:277,en:"I'm sorry for the inconvenience",es:"Lamento las molestias"},{id:278,en:"It won't happen again",es:"No volverá a pasar"},{id:279,en:"Let me know if you have any questions",es:"Avísame si tienes alguna pregunta"},{id:280,en:"Feel free to ask me anything",es:"Siéntete libre de preguntarme lo que sea"},
+{id:281,en:"That reminds me of something",es:"Eso me recuerda algo"},{id:282,en:"Speaking of which, I forgot to tell you",es:"Hablando de eso, se me olvidó decirte"},{id:283,en:"That makes sense",es:"Eso tiene sentido"},{id:284,en:"That's not what I meant",es:"No es lo que quise decir"},{id:285,en:"I completely agree with you",es:"Estoy completamente de acuerdo contigo"},{id:286,en:"I see your point, but I disagree",es:"Entiendo tu punto, pero no estoy de acuerdo"},{id:287,en:"Let's find a compromise",es:"Busquemos un punto medio"},{id:288,en:"We should talk about this later",es:"Deberíamos hablar de esto más tarde"},{id:289,en:"I need to think it over",es:"Necesito pensarlo bien"},{id:290,en:"Let me sleep on it",es:"Déjame pensarlo esta noche"},
+{id:291,en:"I changed my mind about the trip",es:"Cambié de opinión sobre el viaje"},{id:292,en:"I'm considering a new job",es:"Estoy considerando un nuevo trabajo"},{id:293,en:"I decided to take the offer",es:"Decidí aceptar la oferta"},{id:294,en:"We finally made a decision",es:"Por fin tomamos una decisión"},{id:295,en:"It's a difficult decision to make",es:"Es una decisión difícil de tomar"},{id:296,en:"Everything happens for a reason",es:"Todo pasa por una razón"},{id:297,en:"Better late than never",es:"Más vale tarde que nunca"},{id:298,en:"Practice makes perfect",es:"La práctica hace al maestro"},{id:299,en:"Time will tell",es:"El tiempo lo dirá"},{id:300,en:"Actions speak louder than words",es:"Los hechos hablan más que las palabras"},
+];
+PHRASES_B11.forEach(function(p){ p.level = 'B1.1'; });
+
+const PHRASES_B12 = [
+{id:301,en:"If I had known, I would have told you",es:"Si lo hubiera sabido, te lo habría dicho"},{id:302,en:"If I had more time, I would travel more",es:"Si tuviera más tiempo, viajaría más"},{id:303,en:"I wish I had studied more",es:"Ojalá hubiera estudiado más"},{id:304,en:"I wish I could help you",es:"Ojalá pudiera ayudarte"},{id:305,en:"She said she would call me back",es:"Dijo que me llamaría de vuelta"},{id:306,en:"He said he had already finished",es:"Dijo que ya había terminado"},{id:307,en:"They told us the meeting was cancelled",es:"Nos dijeron que la reunión estaba cancelada"},{id:308,en:"I was told that the project was delayed",es:"Me dijeron que el proyecto se retrasó"},{id:309,en:"It is said that this city is very old",es:"Se dice que esta ciudad es muy antigua"},{id:310,en:"It is believed that the house is haunted",es:"Se cree que la casa está embrujada"},
+{id:311,en:"The report was written by the team",es:"El informe fue escrito por el equipo"},{id:312,en:"The decision was made by the board",es:"La decisión fue tomada por la junta"},{id:313,en:"This building was built in 1920",es:"Este edificio fue construido en 1920"},{id:314,en:"The problem has already been solved",es:"El problema ya ha sido resuelto"},{id:315,en:"By next year, I will have finished my degree",es:"Para el próximo año, habré terminado mi carrera"},{id:316,en:"By the time you arrive, I will have left",es:"Para cuando llegues, ya me habré ido"},{id:317,en:"I had already eaten when they arrived",es:"Ya había comido cuando llegaron"},{id:318,en:"We had never seen anything like it",es:"Nunca habíamos visto algo así"},{id:319,en:"Had I known that, I would have acted differently",es:"De haberlo sabido, habría actuado diferente"},{id:320,en:"Should you need anything, let me know",es:"Si necesitas algo, avísame"},
+{id:321,en:"Regardless of the outcome, we tried our best",es:"Independientemente del resultado, hicimos lo posible"},{id:322,en:"No matter what happens, I'll support you",es:"Pase lo que pase, te apoyaré"},{id:323,en:"Whatever the reason, it's not acceptable",es:"Sea cual sea la razón, no es aceptable"},{id:324,en:"As long as you're happy, I'm happy",es:"Mientras estés contento, yo estoy contento"},{id:325,en:"Provided that the weather is good, we'll go hiking",es:"Siempre que el clima esté bueno, iremos de excursión"},{id:326,en:"Given the circumstances, I think it's fair",es:"Dadas las circunstancias, creo que es justo"},{id:327,en:"Taking everything into account, it was a success",es:"Teniendo todo en cuenta, fue un éxito"},{id:328,en:"All things considered, we did well",es:"Considerando todo, lo hicimos bien"},{id:329,en:"It goes without saying that we'll help",es:"No hace falta decir que ayudaremos"},{id:330,en:"Needless to say, we were surprised",es:"Ni que decir tiene que nos sorprendimos"},
+{id:331,en:"On top of that, it started raining",es:"Encima de eso, empezó a llover"},{id:332,en:"What's more, the prices went up",es:"Es más, los precios subieron"},{id:333,en:"Not only did he apologize, but he also helped",es:"No solo se disculpó, sino que también ayudó"},{id:334,en:"Either way, we need to decide soon",es:"De cualquier manera, tenemos que decidir pronto"},{id:335,en:"On the whole, the trip went well",es:"En general, el viaje salió bien"},{id:336,en:"As a matter of fact, I called him yesterday",es:"De hecho, lo llamé ayer"},{id:337,en:"Strictly speaking, that's not correct",es:"Estrictamente hablando, eso no es correcto"},{id:338,en:"Generally speaking, prices are higher here",es:"En general, los precios son más altos aquí"},{id:339,en:"In other words, we need to start over",es:"En otras palabras, tenemos que empezar de nuevo"},{id:340,en:"To put it simply, it didn't work",es:"Para decirlo simplemente, no funcionó"},
+{id:341,en:"I can't help but think about it",es:"No puedo evitar pensar en ello"},{id:342,en:"I couldn't care less about that",es:"Eso me da igual"},{id:343,en:"It's worth mentioning that he apologized",es:"Vale la pena mencionar que se disculpó"},{id:344,en:"It's worth trying at least once",es:"Vale la pena intentarlo al menos una vez"},{id:345,en:"There's no point in arguing about it",es:"No tiene sentido discutir sobre eso"},{id:346,en:"There's no use crying over spilled milk",es:"A lo hecho, pecho"},{id:347,en:"I'd rather not talk about it right now",es:"Prefiero no hablar de eso ahora"},{id:348,en:"I'm inclined to agree with her",es:"Me inclino a estar de acuerdo con ella"},{id:349,en:"I tend to overthink things",es:"Tiendo a pensar demasiado las cosas"},{id:350,en:"I'm used to working under pressure",es:"Estoy acostumbrado a trabajar bajo presión"},
+{id:351,en:"I got used to living alone",es:"Me acostumbré a vivir solo"},{id:352,en:"I'm looking forward to seeing you",es:"Tengo muchas ganas de verte"},{id:353,en:"I can't wait to start the new job",es:"No puedo esperar a empezar el nuevo trabajo"},{id:354,en:"It's about time we talked about this",es:"Ya era hora de que habláramos de esto"},{id:355,en:"It's high time we made a change",es:"Ya es hora de que hagamos un cambio"},{id:356,en:"I'm on the verge of finishing the project",es:"Estoy a punto de terminar el proyecto"},{id:357,en:"We're in the middle of a meeting",es:"Estamos en medio de una reunión"},{id:358,en:"I'm in charge of the new team",es:"Estoy a cargo del nuevo equipo"},{id:359,en:"She's responsible for the whole event",es:"Ella es responsable de todo el evento"},{id:360,en:"He's known for being very punctual",es:"Es conocido por ser muy puntual"},
+{id:361,en:"It's related to what we discussed earlier",es:"Está relacionado con lo que hablamos antes"},{id:362,en:"That has nothing to do with this",es:"Eso no tiene nada que ver con esto"},{id:363,en:"It turns out he was right all along",es:"Resulta que él tenía razón todo el tiempo"},{id:364,en:"As it turns out, the flight was delayed",es:"Resulta que el vuelo se retrasó"},{id:365,en:"It occurred to me that we forgot the tickets",es:"Se me ocurrió que olvidamos los boletos"},{id:366,en:"I just realized I left my keys at home",es:"Me acabo de dar cuenta de que dejé las llaves en casa"},{id:367,en:"I take it you already knew",es:"Supongo que ya lo sabías"},{id:368,en:"Correct me if I'm wrong",es:"Corrígeme si me equivoco"},{id:369,en:"As far as I'm concerned, it's settled",es:"En lo que a mí respecta, está decidido"},{id:370,en:"If you ask me, it's not worth it",es:"Si me lo preguntas, no vale la pena"},
+{id:371,en:"When it comes to cooking, she's an expert",es:"En cuanto a cocinar, ella es una experta"},{id:372,en:"Speaking of work, how's the new project?",es:"Hablando de trabajo, ¿cómo va el nuevo proyecto?"},{id:373,en:"That being said, I still think we should try",es:"Dicho esto, sigo pensando que deberíamos intentarlo"},{id:374,en:"Having said that, let's move forward",es:"Habiendo dicho eso, sigamos adelante"},{id:375,en:"All in all, it was a good decision",es:"En resumen, fue una buena decisión"},{id:376,en:"To sum up, we need more time",es:"En resumen, necesitamos más tiempo"},{id:377,en:"In conclusion, the plan makes sense",es:"En conclusión, el plan tiene sentido"},{id:378,en:"As a result, we had to change plans",es:"Como resultado, tuvimos que cambiar los planes"},{id:379,en:"Consequently, the meeting was postponed",es:"En consecuencia, la reunión se pospuso"},{id:380,en:"Therefore, we should reconsider our options",es:"Por lo tanto, deberíamos reconsiderar nuestras opciones"},
+{id:381,en:"Otherwise, we'll miss the deadline",es:"De lo contrario, perderemos la fecha límite"},{id:382,en:"Or else, we'll have to start over",es:"Si no, tendremos que empezar de nuevo"},{id:383,en:"Little did I know it would take so long",es:"Poco sabía yo que tomaría tanto tiempo"},{id:384,en:"Hardly had we arrived when it started raining",es:"Apenas habíamos llegado cuando empezó a llover"},{id:385,en:"No sooner had I sat down than the phone rang",es:"Apenas me senté cuando sonó el teléfono"},{id:386,en:"Not until later did I understand",es:"No fue hasta más tarde que entendí"},{id:387,en:"Never have I seen such dedication",es:"Nunca he visto tanta dedicación"},{id:388,en:"Seldom do we get this opportunity",es:"Rara vez tenemos esta oportunidad"},{id:389,en:"Rarely have I been so surprised",es:"Rara vez me he sorprendido tanto"},{id:390,en:"Under no circumstances should you cancel",es:"Bajo ninguna circunstancia deberías cancelar"},
+{id:391,en:"Little by little, things are improving",es:"Poco a poco, las cosas están mejorando"},{id:392,en:"Step by step, we'll figure it out",es:"Paso a paso, lo resolveremos"},{id:393,en:"Sooner or later, the truth comes out",es:"Tarde o temprano, la verdad sale a la luz"},{id:394,en:"One way or another, we'll finish this",es:"De una forma u otra, terminaremos esto"},{id:395,en:"When all is said and done, we succeeded",es:"Al final de cuentas, tuvimos éxito"},{id:396,en:"It's not as simple as it seems",es:"No es tan sencillo como parece"},{id:397,en:"There's more to it than meets the eye",es:"Hay más de lo que parece a simple vista"},{id:398,en:"Things aren't always what they seem",es:"Las cosas no siempre son lo que parecen"},{id:399,en:"Every cloud has a silver lining",es:"No hay mal que por bien no venga"},{id:400,en:"Where there's a will, there's a way",es:"Querer es poder"},
+];
+PHRASES_B12.forEach(function(p){ p.level = 'B1.2'; });
+
+PHRASES.push.apply(PHRASES, PHRASES_B11);
+PHRASES.push.apply(PHRASES, PHRASES_B12);
+const PHRASE_LEVELS = ['A1','A2','B1.1','B1.2'];
+
+const PHRASES_BY_ID = Object.fromEntries(PHRASES.map(p=>[p.id,p]));
+
+/* ============================================================
+   WORD FAMILY — nouns / adjectives / adverbs derived from verbs
+   ============================================================ */
+const WORD_FAMILY = [
+{id:1, verbInf:'ser', verbEn:'to be', pos:'noun', en:'being (noun)', es:'el ser'},
+{id:2, verbInf:'estar', verbEn:'to be (state)', pos:'noun', en:'state', es:'el estado'},
+{id:3, verbInf:'ir', verbEn:'to go', pos:'noun', en:'the way there / departure', es:'la ida'},
+{id:4, verbInf:'haber', verbEn:'to have (aux.)', pos:'noun', en:'assets / credit side', es:'el haber'},
+{id:5, verbInf:'tener', verbEn:'to have', pos:'noun', en:'possession / holding', es:'la tenencia'},
+{id:6, verbInf:'hacer', verbEn:'to do / to make', pos:'noun', en:'fact / deed', es:'el hecho'},
+{id:7, verbInf:'hacer', verbEn:'to do / to make', pos:'adj', en:'done, made', es:'hecho/a'},
+{id:8, verbInf:'decir', verbEn:'to say / to tell', pos:'noun', en:'saying', es:'el dicho'},
+{id:9, verbInf:'decir', verbEn:'to say / to tell', pos:'adj', en:'said, aforementioned', es:'dicho/a'},
+{id:10, verbInf:'poder', verbEn:'to be able to', pos:'noun', en:'power', es:'el poder'},
+{id:11, verbInf:'poder', verbEn:'to be able to', pos:'adj', en:'powerful', es:'poderoso/a'},
+{id:12, verbInf:'poner', verbEn:'to put', pos:'noun', en:'setting (e.g. sunset)', es:'la puesta'},
+{id:13, verbInf:'poner', verbEn:'to put', pos:'noun', en:'position / job', es:'el puesto'},
+{id:14, verbInf:'saber', verbEn:'to know (fact)', pos:'noun', en:'knowledge', es:'el saber'},
+{id:15, verbInf:'saber', verbEn:'to know (fact)', pos:'adj', en:'wise', es:'sabio/a'},
+{id:16, verbInf:'querer', verbEn:'to want / to love', pos:'adj', en:'dear, beloved', es:'querido/a'},
+{id:17, verbInf:'venir', verbEn:'to come', pos:'noun', en:'the coming / arrival', es:'la venida'},
+{id:18, verbInf:'venir', verbEn:'to come', pos:'adj', en:'upcoming, future', es:'venidero/a'},
+{id:19, verbInf:'ver', verbEn:'to see', pos:'noun', en:'sight / view', es:'la vista'},
+{id:20, verbInf:'ver', verbEn:'to see', pos:'adj', en:'visible', es:'visible'},
+{id:21, verbInf:'salir', verbEn:'to leave / to go out', pos:'noun', en:'exit / departure', es:'la salida'},
+{id:22, verbInf:'oír', verbEn:'to hear', pos:'noun', en:'(inner) ear, hearing', es:'el oído'},
+{id:23, verbInf:'caer', verbEn:'to fall', pos:'noun', en:'the fall', es:'la caída'},
+{id:24, verbInf:'valer', verbEn:'to be worth', pos:'noun', en:'value, courage', es:'el valor'},
+{id:25, verbInf:'valer', verbEn:'to be worth', pos:'adj', en:'valuable', es:'valioso/a'},
+{id:26, verbInf:'conocer', verbEn:'to know (person/place)', pos:'noun', en:'knowledge', es:'el conocimiento'},
+{id:27, verbInf:'conocer', verbEn:'to know (person/place)', pos:'adj', en:'known, well-known', es:'conocido/a'},
+{id:28, verbInf:'parecer', verbEn:'to seem', pos:'noun', en:'opinion, view', es:'el parecer'},
+{id:29, verbInf:'parecer', verbEn:'to seem', pos:'adj', en:'similar', es:'parecido/a'},
+{id:30, verbInf:'nacer', verbEn:'to be born', pos:'noun', en:'birth', es:'el nacimiento'},
+{id:31, verbInf:'crecer', verbEn:'to grow', pos:'noun', en:'growth', es:'el crecimiento'},
+{id:32, verbInf:'producir', verbEn:'to produce', pos:'noun', en:'production', es:'la producción'},
+{id:33, verbInf:'producir', verbEn:'to produce', pos:'adj', en:'productive', es:'productivo/a'},
+{id:34, verbInf:'conducir', verbEn:'to drive', pos:'noun', en:'driving', es:'la conducción'},
+{id:35, verbInf:'conducir', verbEn:'to drive', pos:'noun', en:'driver', es:'el conductor / la conductora'},
+{id:36, verbInf:'traducir', verbEn:'to translate', pos:'noun', en:'translation', es:'la traducción'},
+{id:37, verbInf:'traducir', verbEn:'to translate', pos:'noun', en:'translator', es:'el traductor / la traductora'},
+{id:38, verbInf:'leer', verbEn:'to read', pos:'noun', en:'reading', es:'la lectura'},
+{id:39, verbInf:'leer', verbEn:'to read', pos:'noun', en:'reader', es:'el lector / la lectora'},
+{id:40, verbInf:'creer', verbEn:'to believe', pos:'noun', en:'belief', es:'la creencia'},
+{id:41, verbInf:'creer', verbEn:'to believe', pos:'adj', en:'believable', es:'creíble'},
+{id:42, verbInf:'construir', verbEn:'to build', pos:'noun', en:'construction', es:'la construcción'},
+{id:43, verbInf:'construir', verbEn:'to build', pos:'noun', en:'builder', es:'el constructor / la constructora'},
+{id:44, verbInf:'huir', verbEn:'to flee', pos:'noun', en:'escape, flight', es:'la huida'},
+{id:45, verbInf:'incluir', verbEn:'to include', pos:'noun', en:'inclusion', es:'la inclusión'},
+{id:46, verbInf:'incluir', verbEn:'to include', pos:'adj', en:'included', es:'incluido/a'},
+{id:47, verbInf:'seguir', verbEn:'to follow / to continue', pos:'noun', en:'follow-up, tracking', es:'el seguimiento'},
+{id:48, verbInf:'seguir', verbEn:'to follow / to continue', pos:'adv', en:'often, in a row', es:'seguido'},
+{id:49, verbInf:'elegir', verbEn:'to choose', pos:'noun', en:'choice, election', es:'la elección'},
+{id:50, verbInf:'elegir', verbEn:'to choose', pos:'adj', en:'chosen, elected', es:'elegido/a'},
+{id:51, verbInf:'corregir', verbEn:'to correct', pos:'noun', en:'correction', es:'la corrección'},
+{id:52, verbInf:'corregir', verbEn:'to correct', pos:'adj', en:'correct', es:'correcto/a'},
+{id:53, verbInf:'dirigir', verbEn:'to direct / to manage', pos:'noun', en:'direction, address', es:'la dirección'},
+{id:54, verbInf:'dirigir', verbEn:'to direct / to manage', pos:'noun', en:'director', es:'el director / la directora'},
+{id:55, verbInf:'pensar', verbEn:'to think', pos:'noun', en:'thought', es:'el pensamiento'},
+{id:56, verbInf:'pensar', verbEn:'to think', pos:'adj', en:'thoughtful', es:'pensativo/a'},
+{id:57, verbInf:'cerrar', verbEn:'to close', pos:'noun', en:'closure, closing', es:'el cierre'},
+{id:58, verbInf:'cerrar', verbEn:'to close', pos:'adj', en:'closed', es:'cerrado/a'},
+{id:59, verbInf:'entender', verbEn:'to understand', pos:'noun', en:'understanding', es:'el entendimiento'},
+{id:60, verbInf:'entender', verbEn:'to understand', pos:'adj', en:'knowledgeable, understood', es:'entendido/a'},
+{id:61, verbInf:'perder', verbEn:'to lose', pos:'noun', en:'loss', es:'la pérdida'},
+{id:62, verbInf:'perder', verbEn:'to lose', pos:'adj', en:'lost', es:'perdido/a'},
+{id:63, verbInf:'encender', verbEn:'to turn on / to light', pos:'noun', en:'ignition', es:'el encendido'},
+{id:64, verbInf:'encender', verbEn:'to turn on / to light', pos:'adj', en:'lit, on', es:'encendido/a'},
+{id:65, verbInf:'negar', verbEn:'to deny', pos:'noun', en:'denial, negation', es:'la negación'},
+{id:66, verbInf:'negar', verbEn:'to deny', pos:'adj', en:'hopeless (at something)', es:'negado/a'},
+{id:67, verbInf:'volver', verbEn:'to return', pos:'noun', en:'return, turn', es:'la vuelta'},
+{id:68, verbInf:'contar', verbEn:'to count / to tell', pos:'noun', en:'story, tale', es:'el cuento'},
+{id:69, verbInf:'contar', verbEn:'to count / to tell', pos:'noun', en:'the bill, account', es:'la cuenta'},
+{id:70, verbInf:'encontrar', verbEn:'to find', pos:'noun', en:'encounter, meeting', es:'el encuentro'},
+{id:71, verbInf:'recordar', verbEn:'to remember', pos:'noun', en:'memory, souvenir', es:'el recuerdo'},
+{id:72, verbInf:'mover', verbEn:'to move', pos:'noun', en:'movement', es:'el movimiento'},
+{id:73, verbInf:'mover', verbEn:'to move', pos:'adj', en:'eventful, busy', es:'movido/a'},
+{id:74, verbInf:'mostrar', verbEn:'to show', pos:'noun', en:'sample, show', es:'la muestra'},
+{id:75, verbInf:'probar', verbEn:'to try / to taste', pos:'noun', en:'test, proof', es:'la prueba'},
+{id:76, verbInf:'probar', verbEn:'to try / to taste', pos:'adj', en:'proven, tested', es:'probado/a'},
+{id:77, verbInf:'sonar', verbEn:'to sound / to ring', pos:'noun', en:'sound', es:'el sonido'},
+{id:78, verbInf:'sonar', verbEn:'to sound / to ring', pos:'adj', en:'loud, sonorous', es:'sonoro/a'},
+{id:79, verbInf:'volar', verbEn:'to fly', pos:'noun', en:'flight', es:'el vuelo'},
+{id:80, verbInf:'volar', verbEn:'to fly', pos:'adj', en:'flying', es:'volador/a'},
+{id:81, verbInf:'jugar', verbEn:'to play', pos:'noun', en:'game, play', es:'el juego'},
+{id:82, verbInf:'jugar', verbEn:'to play', pos:'noun', en:'player', es:'el jugador / la jugadora'},
+{id:83, verbInf:'pedir', verbEn:'to ask for', pos:'noun', en:'order, request', es:'el pedido'},
+{id:84, verbInf:'servir', verbEn:'to serve', pos:'noun', en:'service', es:'el servicio'},
+{id:85, verbInf:'servir', verbEn:'to serve', pos:'noun', en:'server', es:'el servidor / la servidora'},
+{id:86, verbInf:'repetir', verbEn:'to repeat', pos:'noun', en:'repetition', es:'la repetición'},
+{id:87, verbInf:'repetir', verbEn:'to repeat', pos:'adj', en:'repeated', es:'repetido/a'},
+{id:88, verbInf:'medir', verbEn:'to measure', pos:'noun', en:'measurement', es:'la medida'},
+{id:89, verbInf:'medir', verbEn:'to measure', pos:'adj', en:'measured', es:'medido/a'},
+{id:90, verbInf:'vestir', verbEn:'to dress', pos:'noun', en:'dress', es:'el vestido'},
+{id:91, verbInf:'vestir', verbEn:'to dress', pos:'noun', en:'wardrobe', es:'el vestuario'},
+{id:92, verbInf:'sentir', verbEn:'to feel', pos:'noun', en:'feeling', es:'el sentimiento'},
+{id:93, verbInf:'sentir', verbEn:'to feel', pos:'noun', en:'sense, meaning', es:'el sentido'},
+{id:94, verbInf:'dormir', verbEn:'to sleep', pos:'noun', en:'bedroom', es:'el dormitorio'},
+{id:95, verbInf:'dormir', verbEn:'to sleep', pos:'adj', en:'asleep', es:'dormido/a'},
+{id:96, verbInf:'morir', verbEn:'to die', pos:'noun', en:'death', es:'la muerte'},
+{id:97, verbInf:'morir', verbEn:'to die', pos:'adj', en:'dead', es:'muerto/a'},
+{id:98, verbInf:'mentir', verbEn:'to lie', pos:'noun', en:'lie', es:'la mentira'},
+{id:99, verbInf:'mentir', verbEn:'to lie', pos:'adj', en:'lying, a liar', es:'mentiroso/a'},
+{id:100, verbInf:'preferir', verbEn:'to prefer', pos:'noun', en:'preference', es:'la preferencia'},
+{id:101, verbInf:'preferir', verbEn:'to prefer', pos:'adj', en:'favorite, preferred', es:'preferido/a'},
+{id:102, verbInf:'hablar', verbEn:'to speak', pos:'noun', en:'speech', es:'el habla'},
+{id:103, verbInf:'hablar', verbEn:'to speak', pos:'adj', en:'talkative', es:'hablador/a'},
+{id:104, verbInf:'hablar', verbEn:'to speak', pos:'noun', en:'speaker', es:'el hablante'},
+{id:105, verbInf:'trabajar', verbEn:'to work', pos:'noun', en:'work, job', es:'el trabajo'},
+{id:106, verbInf:'trabajar', verbEn:'to work', pos:'noun', en:'worker', es:'el trabajador / la trabajadora'},
+{id:107, verbInf:'trabajar', verbEn:'to work', pos:'adj', en:'hardworking', es:'trabajador/a'},
+{id:108, verbInf:'estudiar', verbEn:'to study', pos:'noun', en:'study', es:'el estudio'},
+{id:109, verbInf:'estudiar', verbEn:'to study', pos:'noun', en:'student', es:'el/la estudiante'},
+{id:110, verbInf:'llegar', verbEn:'to arrive', pos:'noun', en:'arrival', es:'la llegada'},
+{id:111, verbInf:'llevar', verbEn:'to carry / to wear', pos:'adj', en:'bearable, manageable', es:'llevadero/a'},
+{id:112, verbInf:'tomar', verbEn:'to take / to drink', pos:'noun', en:'take, dose', es:'la toma'},
+{id:113, verbInf:'buscar', verbEn:'to look for', pos:'noun', en:'search', es:'la búsqueda'},
+{id:114, verbInf:'buscar', verbEn:'to look for', pos:'noun', en:'search engine, searcher', es:'el buscador'},
+{id:115, verbInf:'mirar', verbEn:'to look / to watch', pos:'noun', en:'gaze, look', es:'la mirada'},
+{id:116, verbInf:'escuchar', verbEn:'to listen', pos:'noun', en:'listening', es:'la escucha'},
+{id:117, verbInf:'esperar', verbEn:'to wait / to hope', pos:'noun', en:'wait', es:'la espera'},
+{id:118, verbInf:'esperar', verbEn:'to wait / to hope', pos:'noun', en:'hope', es:'la esperanza'},
+{id:119, verbInf:'necesitar', verbEn:'to need', pos:'noun', en:'need', es:'la necesidad'},
+{id:120, verbInf:'necesitar', verbEn:'to need', pos:'adj', en:'necessary', es:'necesario/a'},
+{id:121, verbInf:'ayudar', verbEn:'to help', pos:'noun', en:'help', es:'la ayuda'},
+{id:122, verbInf:'ayudar', verbEn:'to help', pos:'noun', en:'assistant, helper', es:'el/la ayudante'},
+{id:123, verbInf:'usar', verbEn:'to use', pos:'noun', en:'use', es:'el uso'},
+{id:124, verbInf:'usar', verbEn:'to use', pos:'adj', en:'used', es:'usado/a'},
+{id:125, verbInf:'cambiar', verbEn:'to change', pos:'noun', en:'change', es:'el cambio'},
+{id:126, verbInf:'cambiar', verbEn:'to change', pos:'adj', en:'changing, changeable', es:'cambiante'},
+{id:127, verbInf:'preguntar', verbEn:'to ask', pos:'noun', en:'question', es:'la pregunta'},
+{id:128, verbInf:'explicar', verbEn:'to explain', pos:'noun', en:'explanation', es:'la explicación'},
+{id:129, verbInf:'explicar', verbEn:'to explain', pos:'adj', en:'explanatory', es:'explicativo/a'},
+{id:130, verbInf:'terminar', verbEn:'to finish', pos:'noun', en:'ending, termination', es:'la terminación'},
+{id:131, verbInf:'ganar', verbEn:'to win / to earn', pos:'noun', en:'profit, earning', es:'la ganancia'},
+{id:132, verbInf:'ganar', verbEn:'to win / to earn', pos:'noun', en:'winner', es:'el ganador / la ganadora'},
+{id:133, verbInf:'viajar', verbEn:'to travel', pos:'noun', en:'trip', es:'el viaje'},
+{id:134, verbInf:'viajar', verbEn:'to travel', pos:'noun', en:'traveler', es:'el viajero / la viajera'},
+{id:135, verbInf:'cocinar', verbEn:'to cook', pos:'noun', en:'kitchen, cuisine', es:'la cocina'},
+{id:136, verbInf:'cocinar', verbEn:'to cook', pos:'noun', en:'cook, chef', es:'el cocinero / la cocinera'},
+{id:137, verbInf:'comprar', verbEn:'to buy', pos:'noun', en:'purchase', es:'la compra'},
+{id:138, verbInf:'comprar', verbEn:'to buy', pos:'noun', en:'buyer', es:'el comprador / la compradora'},
+{id:172, verbInf:'comprar', verbEn:'to buy', pos:'adj', en:'bought, purchased', es:'comprado/a'},
+{id:139, verbInf:'pagar', verbEn:'to pay', pos:'noun', en:'payment', es:'el pago'},
+{id:140, verbInf:'tocar', verbEn:'to touch / to play', pos:'noun', en:'touch', es:'el toque'},
+{id:141, verbInf:'caminar', verbEn:'to walk', pos:'noun', en:'path, road', es:'el camino'},
+{id:142, verbInf:'caminar', verbEn:'to walk', pos:'noun', en:'walker', es:'el/la caminante'},
+{id:143, verbInf:'comer', verbEn:'to eat', pos:'noun', en:'food, meal', es:'la comida'},
+{id:144, verbInf:'comer', verbEn:'to eat', pos:'adj', en:'edible', es:'comestible'},
+{id:145, verbInf:'beber', verbEn:'to drink', pos:'noun', en:'drink', es:'la bebida'},
+{id:146, verbInf:'beber', verbEn:'to drink', pos:'noun', en:'drinker', es:'el bebedor / la bebedora'},
+{id:147, verbInf:'aprender', verbEn:'to learn', pos:'noun', en:'learning', es:'el aprendizaje'},
+{id:148, verbInf:'aprender', verbEn:'to learn', pos:'noun', en:'apprentice, learner', es:'el/la aprendiz'},
+{id:149, verbInf:'vender', verbEn:'to sell', pos:'noun', en:'sale', es:'la venta'},
+{id:150, verbInf:'vender', verbEn:'to sell', pos:'noun', en:'salesperson, seller', es:'el vendedor / la vendedora'},
+{id:151, verbInf:'correr', verbEn:'to run', pos:'noun', en:'race, career', es:'la carrera'},
+{id:152, verbInf:'correr', verbEn:'to run', pos:'noun', en:'runner, corridor', es:'el corredor / la corredora'},
+{id:153, verbInf:'deber', verbEn:'to owe / should', pos:'noun', en:'duty, homework', es:'el deber'},
+{id:154, verbInf:'deber', verbEn:'to owe / should', pos:'noun', en:'debt', es:'la deuda'},
+{id:155, verbInf:'romper', verbEn:'to break', pos:'noun', en:'breakup, rupture', es:'la ruptura'},
+{id:156, verbInf:'romper', verbEn:'to break', pos:'adj', en:'broken', es:'roto/a'},
+{id:157, verbInf:'vivir', verbEn:'to live', pos:'noun', en:'life', es:'la vida'},
+{id:158, verbInf:'vivir', verbEn:'to live', pos:'adj', en:'alive, lively', es:'vivo/a'},
+{id:159, verbInf:'escribir', verbEn:'to write', pos:'noun', en:'writing', es:'la escritura'},
+{id:160, verbInf:'escribir', verbEn:'to write', pos:'noun', en:'writer', es:'el escritor / la escritora'},
+{id:161, verbInf:'abrir', verbEn:'to open', pos:'noun', en:'opening', es:'la apertura'},
+{id:162, verbInf:'abrir', verbEn:'to open', pos:'adj', en:'open', es:'abierto/a'},
+{id:163, verbInf:'decidir', verbEn:'to decide', pos:'noun', en:'decision', es:'la decisión'},
+{id:164, verbInf:'decidir', verbEn:'to decide', pos:'adj', en:'determined, decisive', es:'decidido/a'},
+{id:165, verbInf:'permitir', verbEn:'to allow', pos:'noun', en:'permission', es:'el permiso'},
+{id:166, verbInf:'permitir', verbEn:'to allow', pos:'adj', en:'allowed', es:'permitido/a'},
+{id:167, verbInf:'recibir', verbEn:'to receive', pos:'noun', en:'receipt', es:'el recibo'},
+{id:168, verbInf:'recibir', verbEn:'to receive', pos:'noun', en:'reception', es:'la recepción'},
+{id:169, verbInf:'describir', verbEn:'to describe', pos:'noun', en:'description', es:'la descripción'},
+{id:170, verbInf:'describir', verbEn:'to describe', pos:'adj', en:'descriptive', es:'descriptivo/a'},
+{id:171, verbInf:'ayudar', verbEn:'to help', pos:'adj', en:'helpful (related word, not derived from ayudar)', es:'servicial'},
+{id:173, verbInf:'ir', verbEn:'to go', pos:'adj', en:"gone; out of it (colloquial)", es:'ido/a'},
+{id:174, verbInf:'poner', verbEn:'to put', pos:'adj', en:'set, put together; well put-together (bien puesto)', es:'puesto/a'},
+{id:175, verbInf:'salir', verbEn:'to leave / to go out', pos:'adj', en:'protruding, sticking out', es:'salido/a'},
+{id:176, verbInf:'caer', verbEn:'to fall', pos:'adj', en:'fallen', es:'caído/a'},
+{id:177, verbInf:'nacer', verbEn:'to be born', pos:'adj', en:'born', es:'nacido/a'},
+{id:178, verbInf:'crecer', verbEn:'to grow', pos:'adj', en:'grown, grown-up', es:'crecido/a'},
+{id:179, verbInf:'traducir', verbEn:'to translate', pos:'adj', en:'translated', es:'traducido/a'},
+{id:180, verbInf:'leer', verbEn:'to read', pos:'adj', en:'well-read', es:'leído/a'},
+{id:181, verbInf:'construir', verbEn:'to build', pos:'adj', en:'built, constructed', es:'construido/a'},
+{id:182, verbInf:'dirigir', verbEn:'to direct / to manage', pos:'adj', en:'directed, aimed (at)', es:'dirigido/a'},
+{id:183, verbInf:'contar', verbEn:'to count / to tell', pos:'adj', en:'counted; scarce (contadas veces)', es:'contado/a'},
+{id:184, verbInf:'recordar', verbEn:'to remember', pos:'adj', en:'remembered', es:'recordado/a'},
+{id:185, verbInf:'servir', verbEn:'to serve', pos:'adj', en:'served', es:'servido/a'},
+{id:186, verbInf:'vestir', verbEn:'to dress', pos:'adj', en:'dressed', es:'vestido/a'},
+{id:187, verbInf:'sentir', verbEn:'to feel', pos:'adj', en:'heartfelt, sincere', es:'sentido/a'},
+{id:188, verbInf:'llegar', verbEn:'to arrive', pos:'adj', en:'arrived; newcomer (recién llegado)', es:'llegado/a'},
+{id:189, verbInf:'tomar', verbEn:'to take / to drink', pos:'adj', en:'taken; tipsy (colloquial)', es:'tomado/a'},
+{id:190, verbInf:'buscar', verbEn:'to look for', pos:'adj', en:'wanted, sought-after', es:'buscado/a'},
+{id:191, verbInf:'mirar', verbEn:'to look / to watch', pos:'adj', en:'regarded; careful, considerate', es:'mirado/a'},
+{id:192, verbInf:'esperar', verbEn:'to wait / to hope', pos:'adj', en:'expected', es:'esperado/a'},
+{id:193, verbInf:'terminar', verbEn:'to finish', pos:'adj', en:'finished', es:'terminado/a'},
+{id:194, verbInf:'ganar', verbEn:'to win / to earn', pos:'adj', en:'earned, won', es:'ganado/a'},
+{id:195, verbInf:'viajar', verbEn:'to travel', pos:'adj', en:'well-traveled (colloquial)', es:'viajado/a'},
+{id:196, verbInf:'cocinar', verbEn:'to cook', pos:'adj', en:'cooked', es:'cocinado/a'},
+{id:197, verbInf:'pagar', verbEn:'to pay', pos:'adj', en:'paid', es:'pagado/a'},
+{id:198, verbInf:'tocar', verbEn:'to touch / to play', pos:'adj', en:'touched; a bit crazy (colloquial)', es:'tocado/a'},
+{id:199, verbInf:'beber', verbEn:'to drink', pos:'adj', en:'drunk, tipsy (colloquial)', es:'bebido/a'},
+{id:200, verbInf:'aprender', verbEn:'to learn', pos:'adj', en:'learned', es:'aprendido/a'},
+{id:201, verbInf:'vender', verbEn:'to sell', pos:'adj', en:'sold', es:'vendido/a'},
+{id:202, verbInf:'correr', verbEn:'to run', pos:'adj', en:'embarrassed (colloquial); continuous', es:'corrido/a'},
+{id:203, verbInf:'deber', verbEn:'to owe / should', pos:'adj', en:'due, owed (debido a = due to)', es:'debido/a'},
+{id:204, verbInf:'escribir', verbEn:'to write', pos:'adj', en:'written', es:'escrito/a'},
+{id:205, verbInf:'recibir', verbEn:'to receive', pos:'adj', en:'received', es:'recibido/a'},
+{id:206, verbInf:'volver', verbEn:'to return', pos:'adj', en:'returned', es:'vuelto/a'},
+{id:207, verbInf:'ver', verbEn:'to see', pos:'adj', en:'seen; regarded (bien/mal visto)', es:'visto/a'},
+];
+function wordKey(item){ return 'wf::'+item.id; }
+const POS_LABEL = { noun:'Noun', adj:'Adjective', adv:'Adverb' };
+const WORD_FAMILY_BY_VERB = {};
+WORD_FAMILY.forEach(function(w){
+  if(!WORD_FAMILY_BY_VERB[w.verbInf]) WORD_FAMILY_BY_VERB[w.verbInf] = [];
+  WORD_FAMILY_BY_VERB[w.verbInf].push(w);
+});
+
+/* ============================================================
+   VOCABULARY — Instituto Cervantes A1/A2 curriculum, simplified
+   into broader categories. Built in batches.
+   ============================================================ */
+const VOCAB = [
+// --- Body & Health ---
+{id:1,es:'el pelo',en:'hair',level:'A1',category:'Body & Health'},
+{id:2,es:'el ojo',en:'eye',level:'A1',category:'Body & Health'},
+{id:3,es:'la nariz',en:'nose',level:'A1',category:'Body & Health'},
+{id:4,es:'la cabeza',en:'head',level:'A2',category:'Body & Health'},
+{id:5,es:'la cara',en:'face',level:'A2',category:'Body & Health'},
+{id:6,es:'el brazo',en:'arm',level:'A2',category:'Body & Health'},
+{id:7,es:'la mano',en:'hand',level:'A2',category:'Body & Health'},
+{id:8,es:'el dedo',en:'finger',level:'A2',category:'Body & Health'},
+{id:9,es:'la pierna',en:'leg',level:'A2',category:'Body & Health'},
+{id:10,es:'el pie',en:'foot',level:'A2',category:'Body & Health'},
+{id:11,es:'el oído',en:'(inner) ear',level:'A2',category:'Body & Health'},
+{id:12,es:'la muela',en:'molar, tooth',level:'A2',category:'Body & Health'},
+{id:13,es:'la garganta',en:'throat',level:'A2',category:'Body & Health'},
+{id:14,es:'el estómago',en:'stomach',level:'A2',category:'Body & Health'},
+{id:15,es:'la espalda',en:'back',level:'A2',category:'Body & Health'},
+{id:16,es:'alto/a',en:'tall',level:'A1',category:'Body & Health'},
+{id:17,es:'bajo/a',en:'short',level:'A1',category:'Body & Health'},
+{id:18,es:'gordo/a',en:'fat',level:'A1',category:'Body & Health'},
+{id:19,es:'delgado/a',en:'thin',level:'A1',category:'Body & Health'},
+{id:20,es:'guapo/a',en:'good-looking',level:'A1',category:'Body & Health'},
+{id:21,es:'feo/a',en:'ugly',level:'A1',category:'Body & Health'},
+{id:22,es:'rubio/a',en:'blonde',level:'A1',category:'Body & Health'},
+{id:23,es:'moreno/a',en:'dark-haired, tanned',level:'A1',category:'Body & Health'},
+{id:24,es:'la barba',en:'beard',level:'A1',category:'Body & Health'},
+{id:25,es:'el bigote',en:'mustache',level:'A1',category:'Body & Health'},
+{id:26,es:'las gafas',en:'glasses',level:'A1',category:'Body & Health'},
+{id:27,es:'claro/a',en:'light-colored',level:'A2',category:'Body & Health'},
+{id:28,es:'oscuro/a',en:'dark',level:'A2',category:'Body & Health'},
+{id:29,es:'azul',en:'blue',level:'A2',category:'Body & Health'},
+{id:30,es:'verde',en:'green',level:'A2',category:'Body & Health'},
+{id:31,es:'negro/a',en:'black',level:'A2',category:'Body & Health'},
+{id:32,es:'marrón',en:'brown',level:'A2',category:'Body & Health'},
+{id:33,es:'grande',en:'big',level:'A2',category:'Body & Health'},
+{id:34,es:'pequeño/a',en:'small',level:'A2',category:'Body & Health'},
+{id:35,es:'calvo/a',en:'bald',level:'A2',category:'Body & Health'},
+{id:36,es:'liso/a',en:'straight (hair), smooth',level:'A2',category:'Body & Health'},
+{id:37,es:'rizado/a',en:'curly',level:'A2',category:'Body & Health'},
+{id:38,es:'largo/a',en:'long',level:'A2',category:'Body & Health'},
+{id:39,es:'corto/a',en:'short (length)',level:'A2',category:'Body & Health'},
+{id:40,es:'la gorra',en:'cap',level:'A2',category:'Body & Health'},
+{id:41,es:'el sombrero',en:'hat',level:'A2',category:'Body & Health'},
+{id:42,es:'el pañuelo',en:'scarf, handkerchief',level:'A2',category:'Body & Health'},
+{id:43,es:'levantarse',en:'to get up',level:'A1',category:'Body & Health'},
+{id:44,es:'ducharse',en:'to shower',level:'A1',category:'Body & Health'},
+{id:45,es:'escuchar',en:'to listen',level:'A1',category:'Body & Health'},
+{id:46,es:'lavarse',en:'to wash oneself',level:'A1',category:'Body & Health'},
+{id:47,es:'peinarse',en:"to comb one's hair",level:'A1',category:'Body & Health'},
+{id:48,es:'afeitarse',en:'to shave',level:'A1',category:'Body & Health'},
+{id:49,es:'andar',en:'to walk',level:'A2',category:'Body & Health'},
+{id:50,es:'pasear',en:'to stroll',level:'A2',category:'Body & Health'},
+{id:51,es:'correr',en:'to run',level:'A2',category:'Body & Health'},
+{id:52,es:'subir',en:'to go up',level:'A2',category:'Body & Health'},
+{id:53,es:'bajar',en:'to go down',level:'A2',category:'Body & Health'},
+{id:54,es:'sentarse',en:'to sit down',level:'A2',category:'Body & Health'},
+{id:55,es:'ver',en:'to see',level:'A2',category:'Body & Health'},
+{id:56,es:'oír',en:'to hear',level:'A2',category:'Body & Health'},
+{id:57,es:'coger',en:'to take, to grab',level:'A2',category:'Body & Health'},
+{id:58,es:'hacer ejercicio',en:'to exercise',level:'A2',category:'Body & Health'},
+{id:59,es:'la gimnasia',en:'gymnastics',level:'A2',category:'Body & Health'},
+{id:60,es:'el deporte',en:'sport',level:'A2',category:'Body & Health'},
+{id:61,es:'el sexo',en:'sex, gender',level:'A1',category:'Body & Health'},
+{id:62,es:'nacer',en:'to be born',level:'A2',category:'Body & Health'},
+{id:63,es:'crecer',en:'to grow',level:'A2',category:'Body & Health'},
+{id:64,es:'tener un hijo',en:'to have a child',level:'A2',category:'Body & Health'},
+{id:65,es:'morir',en:'to die',level:'A2',category:'Body & Health'},
+// --- Personality & Feelings ---
+{id:66,es:'simpático/a',en:'nice, likeable',level:'A1',category:'Personality & Feelings'},
+{id:67,es:'antipático/a',en:'unpleasant',level:'A1',category:'Personality & Feelings'},
+{id:68,es:'inteligente',en:'intelligent',level:'A1',category:'Personality & Feelings'},
+{id:69,es:'trabajador/a',en:'hardworking',level:'A1',category:'Personality & Feelings'},
+{id:70,es:'alegre',en:'cheerful',level:'A1',category:'Personality & Feelings'},
+{id:71,es:'serio/a',en:'serious',level:'A1',category:'Personality & Feelings'},
+{id:72,es:'tímido/a',en:'shy',level:'A1',category:'Personality & Feelings'},
+{id:73,es:'sociable',en:'sociable',level:'A1',category:'Personality & Feelings'},
+{id:74,es:'el carácter',en:'character, personality',level:'A2',category:'Personality & Feelings'},
+{id:75,es:'optimista',en:'optimistic',level:'A2',category:'Personality & Feelings'},
+{id:76,es:'abierto/a',en:'open (personality)',level:'A2',category:'Personality & Feelings'},
+{id:77,es:'reservado/a',en:'reserved',level:'A2',category:'Personality & Feelings'},
+{id:78,es:'tranquilo/a',en:'calm',level:'A2',category:'Personality & Feelings'},
+{id:79,es:'nervioso/a',en:'nervous',level:'A2',category:'Personality & Feelings'},
+{id:80,es:'generoso/a',en:'generous',level:'A2',category:'Personality & Feelings'},
+{id:81,es:'egoísta',en:'selfish',level:'A2',category:'Personality & Feelings'},
+{id:82,es:'amable',en:'kind',level:'A2',category:'Personality & Feelings'},
+{id:83,es:'agradable',en:'pleasant',level:'A2',category:'Personality & Feelings'},
+{id:84,es:'tolerante',en:'tolerant',level:'A2',category:'Personality & Feelings'},
+{id:85,es:'triste',en:'sad',level:'A1',category:'Personality & Feelings'},
+{id:86,es:'contento/a',en:'happy, content',level:'A1',category:'Personality & Feelings'},
+{id:87,es:'enfadado/a',en:'angry',level:'A1',category:'Personality & Feelings'},
+{id:88,es:'preocupado/a',en:'worried',level:'A1',category:'Personality & Feelings'},
+{id:89,es:'gustar',en:'to like',level:'A2',category:'Personality & Feelings'},
+{id:90,es:'encantar',en:'to love, to delight',level:'A2',category:'Personality & Feelings'},
+{id:91,es:'odiar',en:'to hate',level:'A2',category:'Personality & Feelings'},
+{id:92,es:'tener miedo',en:'to be afraid',level:'A2',category:'Personality & Feelings'},
+// --- Personal Identity ---
+{id:93,es:'el nombre',en:'name',level:'A1',category:'Personal Identity'},
+{id:94,es:'el apellido',en:'surname',level:'A1',category:'Personal Identity'},
+{id:95,es:'el señor',en:'Mr., sir',level:'A1',category:'Personal Identity'},
+{id:96,es:'la señora',en:'Mrs., madam',level:'A1',category:'Personal Identity'},
+{id:97,es:'llamarse',en:'to be called',level:'A1',category:'Personal Identity'},
+{id:98,es:'firmar',en:'to sign',level:'A2',category:'Personal Identity'},
+{id:99,es:'presentarse',en:'to introduce oneself',level:'A2',category:'Personal Identity'},
+{id:100,es:'la dirección',en:'address',level:'A1',category:'Personal Identity'},
+{id:101,es:'el correo electrónico',en:'email',level:'A1',category:'Personal Identity'},
+{id:102,es:'la calle',en:'street',level:'A1',category:'Personal Identity'},
+{id:103,es:'la avenida',en:'avenue',level:'A1',category:'Personal Identity'},
+{id:104,es:'la plaza',en:'square',level:'A1',category:'Personal Identity'},
+{id:105,es:'el piso',en:'floor, apartment',level:'A1',category:'Personal Identity'},
+{id:106,es:'el número',en:'number',level:'A1',category:'Personal Identity'},
+{id:107,es:'el código postal',en:'postal code',level:'A1',category:'Personal Identity'},
+{id:108,es:'la casa',en:'house',level:'A1',category:'Personal Identity'},
+{id:109,es:'la habitación',en:'room',level:'A1',category:'Personal Identity'},
+{id:110,es:'el país',en:'country',level:'A1',category:'Personal Identity'},
+{id:111,es:'la ciudad',en:'city',level:'A1',category:'Personal Identity'},
+{id:112,es:'el pueblo',en:'town',level:'A1',category:'Personal Identity'},
+{id:113,es:'vivir',en:'to live',level:'A1',category:'Personal Identity'},
+{id:114,es:'el número de teléfono',en:'phone number',level:'A1',category:'Personal Identity'},
+{id:115,es:'el móvil',en:'cell phone',level:'A1',category:'Personal Identity'},
+{id:116,es:'el prefijo',en:'area/country code',level:'A2',category:'Personal Identity'},
+{id:117,es:'el lugar de nacimiento',en:'place of birth',level:'A1',category:'Personal Identity'},
+{id:118,es:'la fecha de nacimiento',en:'date of birth',level:'A1',category:'Personal Identity'},
+{id:119,es:'la nacionalidad',en:'nationality',level:'A1',category:'Personal Identity'},
+{id:120,es:'el extranjero',en:'foreigner',level:'A1',category:'Personal Identity'},
+{id:121,es:'español/a',en:'Spanish',level:'A1',category:'Personal Identity'},
+{id:122,es:'alemán/alemana',en:'German',level:'A1',category:'Personal Identity'},
+{id:123,es:'mexicano/a',en:'Mexican',level:'A1',category:'Personal Identity'},
+{id:124,es:'la edad',en:'age',level:'A1',category:'Personal Identity'},
+{id:125,es:'el niño / la niña',en:'child, boy/girl',level:'A1',category:'Personal Identity'},
+{id:126,es:'el chico / la chica',en:'guy, girl',level:'A1',category:'Personal Identity'},
+{id:127,es:'joven',en:'young, young person',level:'A1',category:'Personal Identity'},
+{id:128,es:'viejo/a',en:'old',level:'A1',category:'Personal Identity'},
+{id:129,es:'el bebé',en:'baby',level:'A2',category:'Personal Identity'},
+{id:130,es:'el/la adolescente',en:'teenager',level:'A2',category:'Personal Identity'},
+{id:131,es:'la persona mayor',en:'elderly person',level:'A2',category:'Personal Identity'},
+{id:132,es:'el hombre',en:'man',level:'A1',category:'Personal Identity'},
+{id:133,es:'la mujer',en:'woman, wife',level:'A1',category:'Personal Identity'},
+{id:134,es:'el estado civil',en:'marital status',level:'A1',category:'Personal Identity'},
+{id:135,es:'soltero/a',en:'single',level:'A1',category:'Personal Identity'},
+{id:136,es:'casado/a',en:'married',level:'A1',category:'Personal Identity'},
+{id:137,es:'viudo/a',en:'widowed',level:'A1',category:'Personal Identity'},
+{id:138,es:'separado/a',en:'separated',level:'A1',category:'Personal Identity'},
+{id:139,es:'divorciado/a',en:'divorced',level:'A1',category:'Personal Identity'},
+{id:140,es:'el marido',en:'husband',level:'A1',category:'Personal Identity'},
+{id:141,es:'casarse',en:'to get married',level:'A2',category:'Personal Identity'},
+{id:142,es:'separarse',en:'to separate',level:'A2',category:'Personal Identity'},
+{id:143,es:'divorciarse',en:'to get divorced',level:'A2',category:'Personal Identity'},
+{id:144,es:'el pasaporte',en:'passport',level:'A1',category:'Personal Identity'},
+{id:145,es:'el carné de identidad',en:'ID card',level:'A1',category:'Personal Identity'},
+{id:146,es:'el carné de conducir',en:"driver's license",level:'A1',category:'Personal Identity'},
+{id:147,es:'la tarjeta de estudiante',en:'student card',level:'A2',category:'Personal Identity'},
+{id:148,es:'las llaves',en:'keys',level:'A1',category:'Personal Identity'},
+{id:149,es:'la cartera',en:'wallet',level:'A1',category:'Personal Identity'},
+{id:150,es:'el bolso',en:'purse, bag',level:'A1',category:'Personal Identity'},
+{id:151,es:'la maleta',en:'suitcase',level:'A1',category:'Personal Identity'},
+{id:152,es:'el reloj',en:'watch, clock',level:'A1',category:'Personal Identity'},
+{id:153,es:'el ordenador',en:'computer',level:'A1',category:'Personal Identity'},
+{id:154,es:'la tarjeta de crédito',en:'credit card',level:'A1',category:'Personal Identity'},
+{id:155,es:'el paraguas',en:'umbrella',level:'A2',category:'Personal Identity'},
+{id:156,es:'la agenda',en:'planner, agenda',level:'A2',category:'Personal Identity'},
+{id:157,es:'la tarjeta de visita',en:'business card',level:'A2',category:'Personal Identity'},
+{id:158,es:'el maletín',en:'briefcase',level:'A2',category:'Personal Identity'},
+// --- Family & Relationships ---
+{id:159,es:'la familia',en:'family',level:'A1',category:'Family & Relationships'},
+{id:160,es:'los padres',en:'parents',level:'A1',category:'Family & Relationships'},
+{id:161,es:'el padre',en:'father',level:'A1',category:'Family & Relationships'},
+{id:162,es:'la madre',en:'mother',level:'A1',category:'Family & Relationships'},
+{id:163,es:'el hijo / la hija',en:'son/daughter, child',level:'A1',category:'Family & Relationships'},
+{id:164,es:'el hermano / la hermana',en:'brother/sister',level:'A1',category:'Family & Relationships'},
+{id:165,es:'el tío / la tía',en:'uncle/aunt',level:'A1',category:'Family & Relationships'},
+{id:166,es:'el sobrino / la sobrina',en:'nephew/niece',level:'A1',category:'Family & Relationships'},
+{id:167,es:'el abuelo / la abuela',en:'grandfather/grandmother',level:'A1',category:'Family & Relationships'},
+{id:168,es:'el nieto / la nieta',en:'grandson/granddaughter',level:'A1',category:'Family & Relationships'},
+{id:169,es:'el primo / la prima',en:'cousin',level:'A1',category:'Family & Relationships'},
+{id:170,es:'la pareja',en:'partner, couple',level:'A1',category:'Family & Relationships'},
+{id:171,es:'el novio / la novia',en:'boyfriend/girlfriend',level:'A1',category:'Family & Relationships'},
+{id:172,es:'papá',en:'dad',level:'A2',category:'Family & Relationships'},
+{id:173,es:'mamá',en:'mom',level:'A2',category:'Family & Relationships'},
+{id:174,es:'el hijo único / la hija única',en:'only child',level:'A2',category:'Family & Relationships'},
+{id:175,es:'los gemelos',en:'twins',level:'A2',category:'Family & Relationships'},
+{id:176,es:'el ex marido / la ex mujer',en:'ex-husband/ex-wife',level:'A2',category:'Family & Relationships'},
+{id:177,es:'vivir juntos',en:'to live together',level:'A2',category:'Family & Relationships'},
+{id:178,es:'el amigo / la amiga',en:'friend',level:'A1',category:'Family & Relationships'},
+{id:179,es:'el jefe / la jefa',en:'boss',level:'A1',category:'Family & Relationships'},
+{id:180,es:'el compañero / la compañera',en:'colleague, classmate',level:'A1',category:'Family & Relationships'},
+{id:181,es:'el vecino / la vecina',en:'neighbor',level:'A1',category:'Family & Relationships'},
+{id:182,es:'el socio / la socia',en:'business partner',level:'A2',category:'Family & Relationships'},
+{id:183,es:'el compañero de clase',en:'classmate',level:'A2',category:'Family & Relationships'},
+{id:184,es:'el compañero de piso',en:'roommate',level:'A2',category:'Family & Relationships'},
+{id:185,es:'la reunión',en:'meeting',level:'A2',category:'Family & Relationships'},
+{id:186,es:'la cita',en:'appointment, date',level:'A2',category:'Family & Relationships'},
+{id:187,es:'visitar',en:'to visit',level:'A2',category:'Family & Relationships'},
+{id:188,es:'invitar',en:'to invite',level:'A2',category:'Family & Relationships'},
+{id:189,es:'la fiesta',en:'party',level:'A1',category:'Family & Relationships'},
+{id:190,es:'el regalo',en:'gift',level:'A1',category:'Family & Relationships'},
+{id:191,es:'la fiesta de cumpleaños',en:'birthday party',level:'A2',category:'Family & Relationships'},
+{id:192,es:'regalar',en:'to give as a gift',level:'A2',category:'Family & Relationships'},
+// --- Food & Drink ---
+{id:193,es:'el desayuno',en:'breakfast',level:'A1',category:'Food & Drink'},
+{id:194,es:'la comida',en:'food, lunch',level:'A1',category:'Food & Drink'},
+{id:195,es:'la merienda',en:'afternoon snack',level:'A1',category:'Food & Drink'},
+{id:196,es:'la cena',en:'dinner',level:'A1',category:'Food & Drink'},
+{id:197,es:'desayunar',en:'to have breakfast',level:'A1',category:'Food & Drink'},
+{id:198,es:'comer',en:'to eat, to have lunch',level:'A1',category:'Food & Drink'},
+{id:199,es:'merendar',en:'to have a snack',level:'A1',category:'Food & Drink'},
+{id:200,es:'cenar',en:'to have dinner',level:'A1',category:'Food & Drink'},
+{id:201,es:'tener hambre',en:'to be hungry',level:'A1',category:'Food & Drink'},
+{id:202,es:'ser vegetariano/a',en:'to be vegetarian',level:'A2',category:'Food & Drink'},
+{id:203,es:'el agua',en:'water',level:'A1',category:'Food & Drink'},
+{id:204,es:'la leche',en:'milk',level:'A1',category:'Food & Drink'},
+{id:205,es:'el té',en:'tea',level:'A1',category:'Food & Drink'},
+{id:206,es:'el café',en:'coffee',level:'A1',category:'Food & Drink'},
+{id:207,es:'la cerveza',en:'beer',level:'A1',category:'Food & Drink'},
+{id:208,es:'el vino',en:'wine',level:'A1',category:'Food & Drink'},
+{id:209,es:'beber',en:'to drink',level:'A1',category:'Food & Drink'},
+{id:210,es:'tener sed',en:'to be thirsty',level:'A1',category:'Food & Drink'},
+{id:211,es:'la bebida',en:'drink',level:'A2',category:'Food & Drink'},
+{id:212,es:'el zumo',en:'juice',level:'A2',category:'Food & Drink'},
+{id:213,es:'la infusión',en:'herbal tea',level:'A2',category:'Food & Drink'},
+{id:214,es:'el ron',en:'rum',level:'A2',category:'Food & Drink'},
+{id:215,es:'la ginebra',en:'gin',level:'A2',category:'Food & Drink'},
+{id:216,es:'el champán',en:'champagne',level:'A2',category:'Food & Drink'},
+{id:217,es:'la botella',en:'bottle',level:'A2',category:'Food & Drink'},
+{id:218,es:'la lata',en:'can',level:'A2',category:'Food & Drink'},
+{id:219,es:'tomar algo',en:'to have a drink/bite',level:'A2',category:'Food & Drink'},
+{id:220,es:'la carne',en:'meat',level:'A1',category:'Food & Drink'},
+{id:221,es:'el pescado',en:'fish',level:'A1',category:'Food & Drink'},
+{id:222,es:'la fruta',en:'fruit',level:'A1',category:'Food & Drink'},
+{id:223,es:'la verdura',en:'vegetable',level:'A1',category:'Food & Drink'},
+{id:224,es:'los huevos',en:'eggs',level:'A1',category:'Food & Drink'},
+{id:225,es:'el pan',en:'bread',level:'A1',category:'Food & Drink'},
+{id:226,es:'el bocadillo',en:'sandwich (baguette-style)',level:'A2',category:'Food & Drink'},
+{id:227,es:'la hamburguesa',en:'hamburger',level:'A2',category:'Food & Drink'},
+{id:228,es:'la lechuga',en:'lettuce',level:'A2',category:'Food & Drink'},
+{id:229,es:'el tomate',en:'tomato',level:'A2',category:'Food & Drink'},
+{id:230,es:'la zanahoria',en:'carrot',level:'A2',category:'Food & Drink'},
+{id:231,es:'el plátano',en:'banana',level:'A2',category:'Food & Drink'},
+{id:232,es:'la manzana',en:'apple',level:'A2',category:'Food & Drink'},
+{id:233,es:'la naranja',en:'orange',level:'A2',category:'Food & Drink'},
+{id:234,es:'la patata',en:'potato',level:'A2',category:'Food & Drink'},
+{id:235,es:'el ajo',en:'garlic',level:'A2',category:'Food & Drink'},
+{id:236,es:'la cebolla',en:'onion',level:'A2',category:'Food & Drink'},
+{id:237,es:'el queso',en:'cheese',level:'A2',category:'Food & Drink'},
+{id:238,es:'el yogur',en:'yogurt',level:'A2',category:'Food & Drink'},
+{id:239,es:'la mantequilla',en:'butter',level:'A2',category:'Food & Drink'},
+{id:240,es:'la salsa',en:'sauce',level:'A2',category:'Food & Drink'},
+{id:241,es:'el salmón',en:'salmon',level:'A2',category:'Food & Drink'},
+{id:242,es:'el atún',en:'tuna',level:'A2',category:'Food & Drink'},
+{id:243,es:'las gambas',en:'shrimp',level:'A2',category:'Food & Drink'},
+{id:244,es:'la pasta',en:'pasta',level:'A2',category:'Food & Drink'},
+{id:245,es:'el arroz',en:'rice',level:'A2',category:'Food & Drink'},
+{id:246,es:'el chocolate',en:'chocolate',level:'A2',category:'Food & Drink'},
+{id:247,es:'las galletas',en:'cookies',level:'A2',category:'Food & Drink'},
+{id:248,es:'los cereales',en:'cereal',level:'A2',category:'Food & Drink'},
+{id:249,es:'el azúcar',en:'sugar',level:'A2',category:'Food & Drink'},
+{id:250,es:'la sal',en:'salt',level:'A2',category:'Food & Drink'},
+{id:251,es:'la pimienta',en:'pepper',level:'A2',category:'Food & Drink'},
+{id:252,es:'el aceite',en:'oil',level:'A2',category:'Food & Drink'},
+{id:253,es:'el filete',en:'steak, fillet',level:'A2',category:'Food & Drink'},
+{id:254,es:'el jamón',en:'ham',level:'A2',category:'Food & Drink'},
+{id:255,es:'el helado',en:'ice cream',level:'A2',category:'Food & Drink'},
+{id:256,es:'la tarta',en:'cake, tart',level:'A2',category:'Food & Drink'},
+{id:257,es:'la receta',en:'recipe',level:'A1',category:'Food & Drink'},
+{id:258,es:'el ingrediente',en:'ingredient',level:'A1',category:'Food & Drink'},
+{id:259,es:'cocinar',en:'to cook',level:'A2',category:'Food & Drink'},
+{id:260,es:'el plato',en:'dish, plate',level:'A1',category:'Food & Drink'},
+{id:261,es:'el postre',en:'dessert',level:'A1',category:'Food & Drink'},
+{id:262,es:'la sopa',en:'soup',level:'A2',category:'Food & Drink'},
+{id:263,es:'la ensalada',en:'salad',level:'A2',category:'Food & Drink'},
+{id:264,es:'la paella',en:'paella',level:'A2',category:'Food & Drink'},
+{id:265,es:'la tortilla',en:'Spanish omelette',level:'A2',category:'Food & Drink'},
+{id:266,es:'la tapa',en:'tapa (small dish)',level:'A2',category:'Food & Drink'},
+{id:267,es:'bueno/a',en:'good',level:'A2',category:'Food & Drink'},
+{id:268,es:'rico/a',en:'tasty',level:'A2',category:'Food & Drink'},
+{id:269,es:'el vaso',en:'glass',level:'A2',category:'Food & Drink'},
+{id:270,es:'la taza',en:'cup',level:'A2',category:'Food & Drink'},
+{id:271,es:'la servilleta',en:'napkin',level:'A2',category:'Food & Drink'},
+{id:272,es:'el bar',en:'bar',level:'A1',category:'Food & Drink'},
+{id:273,es:'el restaurante',en:'restaurant',level:'A1',category:'Food & Drink'},
+{id:274,es:'el camarero / la camarera',en:'waiter/waitress',level:'A1',category:'Food & Drink'},
+{id:275,es:'la mesa',en:'table',level:'A1',category:'Food & Drink'},
+{id:276,es:'el menú',en:'menu',level:'A2',category:'Food & Drink'},
+{id:277,es:'la cuenta',en:'the bill',level:'A2',category:'Food & Drink'},
+{id:278,es:'la cafetería',en:'cafe',level:'A2',category:'Food & Drink'},
+{id:279,es:'la pizzería',en:'pizzeria',level:'A2',category:'Food & Drink'},
+{id:280,es:'el cocinero / la cocinera',en:'cook',level:'A2',category:'Food & Drink'},
+{id:281,es:'el chef',en:'chef',level:'A2',category:'Food & Drink'},
+{id:282,es:'reservar una mesa',en:'to book a table',level:'A2',category:'Food & Drink'},
+{id:283,es:'pedir',en:'to order',level:'A2',category:'Food & Drink'},
+// --- Education ---
+{id:284,es:'el instituto',en:'high school',level:'A1',category:'Education'},
+{id:285,es:'la universidad',en:'university',level:'A1',category:'Education'},
+{id:286,es:'la clase',en:'class, classroom',level:'A1',category:'Education'},
+{id:287,es:'la biblioteca',en:'library',level:'A1',category:'Education'},
+{id:288,es:'el colegio',en:'school',level:'A2',category:'Education'},
+{id:289,es:'la academia',en:'academy',level:'A2',category:'Education'},
+{id:290,es:'el aula',en:'classroom',level:'A2',category:'Education'},
+{id:291,es:'el profesor / la profesora',en:'teacher',level:'A1',category:'Education'},
+{id:292,es:'el estudiante / la estudiante',en:'student',level:'A1',category:'Education'},
+{id:293,es:'el director / la directora',en:'principal, director',level:'A1',category:'Education'},
+{id:294,es:'el alumno / la alumna',en:'pupil',level:'A2',category:'Education'},
+{id:295,es:'el horario',en:'schedule',level:'A1',category:'Education'},
+{id:296,es:'el examen',en:'exam',level:'A1',category:'Education'},
+{id:297,es:'el programa del curso',en:'course syllabus',level:'A2',category:'Education'},
+{id:298,es:'pagar la matrícula',en:'to pay tuition',level:'A2',category:'Education'},
+{id:299,es:'hacer un curso',en:'to take a course',level:'A2',category:'Education'},
+{id:300,es:'aprender',en:'to learn',level:'A1',category:'Education'},
+{id:301,es:'estudiar',en:'to study',level:'A1',category:'Education'},
+{id:302,es:'ir a clase',en:'to go to class',level:'A1',category:'Education'},
+{id:303,es:'dar clases',en:'to teach',level:'A2',category:'Education'},
+{id:304,es:'hacer un examen',en:'to take an exam',level:'A1',category:'Education'},
+{id:305,es:'el diploma',en:'diploma',level:'A2',category:'Education'},
+{id:306,es:'el certificado',en:'certificate',level:'A2',category:'Education'},
+{id:307,es:'aprobar',en:'to pass (an exam)',level:'A2',category:'Education'},
+{id:308,es:'suspender',en:'to fail (an exam)',level:'A2',category:'Education'},
+{id:309,es:'las Matemáticas',en:'Mathematics',level:'A1',category:'Education'},
+{id:310,es:'la Historia',en:'History',level:'A1',category:'Education'},
+{id:311,es:'el ejercicio',en:'exercise',level:'A1',category:'Education'},
+{id:312,es:'la actividad',en:'activity',level:'A1',category:'Education'},
+{id:313,es:'la lección',en:'lesson',level:'A1',category:'Education'},
+{id:314,es:'la unidad',en:'unit',level:'A1',category:'Education'},
+{id:315,es:'la página',en:'page',level:'A1',category:'Education'},
+{id:316,es:'la pregunta',en:'question',level:'A1',category:'Education'},
+{id:317,es:'hablar',en:'to speak',level:'A1',category:'Education'},
+{id:318,es:'leer',en:'to read',level:'A1',category:'Education'},
+{id:319,es:'escribir',en:'to write',level:'A1',category:'Education'},
+{id:320,es:'entender',en:'to understand',level:'A1',category:'Education'},
+{id:321,es:'comprender',en:'to understand, comprehend',level:'A1',category:'Education'},
+{id:322,es:'saber',en:'to know',level:'A1',category:'Education'},
+{id:323,es:'repetir',en:'to repeat',level:'A2',category:'Education'},
+{id:324,es:'practicar',en:'to practice',level:'A2',category:'Education'},
+{id:325,es:'preguntar',en:'to ask',level:'A2',category:'Education'},
+{id:326,es:'contestar',en:'to answer',level:'A2',category:'Education'},
+{id:327,es:'completar',en:'to complete',level:'A2',category:'Education'},
+{id:328,es:'dibujar',en:'to draw',level:'A2',category:'Education'},
+{id:329,es:'jugar',en:'to play',level:'A2',category:'Education'},
+{id:330,es:'adivinar',en:'to guess',level:'A2',category:'Education'},
+{id:331,es:'memorizar',en:'to memorize',level:'A2',category:'Education'},
+{id:332,es:'repasar',en:'to review',level:'A2',category:'Education'},
+{id:333,es:'cometer un error',en:'to make a mistake',level:'A2',category:'Education'},
+{id:334,es:'el libro',en:'book',level:'A1',category:'Education'},
+{id:335,es:'el diccionario',en:'dictionary',level:'A1',category:'Education'},
+{id:336,es:'el papel',en:'paper',level:'A1',category:'Education'},
+{id:337,es:'el bolígrafo',en:'pen',level:'A1',category:'Education'},
+{id:338,es:'el lápiz',en:'pencil',level:'A1',category:'Education'},
+{id:339,es:'la goma',en:'eraser',level:'A1',category:'Education'},
+{id:340,es:'la silla',en:'chair',level:'A1',category:'Education'},
+{id:341,es:'el armario',en:'cabinet',level:'A2',category:'Education'},
+{id:342,es:'la estantería',en:'bookshelf',level:'A2',category:'Education'},
+{id:343,es:'la pizarra',en:'blackboard, whiteboard',level:'A2',category:'Education'},
+{id:344,es:'el cuaderno',en:'notebook',level:'A2',category:'Education'},
+{id:345,es:'la hoja',en:'sheet of paper',level:'A2',category:'Education'},
+{id:346,es:'la regla',en:'ruler',level:'A2',category:'Education'},
+{id:347,es:'la impresora',en:'printer',level:'A2',category:'Education'},
+// --- Work ---
+{id:348,es:'el abogado / la abogada',en:'lawyer',level:'A1',category:'Work'},
+{id:349,es:'el médico / la médica',en:'doctor',level:'A1',category:'Work'},
+{id:350,es:'el taxista / la taxista',en:'taxi driver',level:'A1',category:'Work'},
+{id:351,es:'el ama de casa',en:'homemaker',level:'A1',category:'Work'},
+{id:352,es:'trabajar',en:'to work',level:'A1',category:'Work'},
+{id:353,es:'el dependiente / la dependienta',en:'shop assistant',level:'A1',category:'Work'},
+{id:354,es:'el funcionario / la funcionaria',en:'civil servant',level:'A2',category:'Work'},
+{id:355,es:'el empresario / la empresaria',en:'businessperson',level:'A2',category:'Work'},
+{id:356,es:'tener un trabajo',en:'to have a job',level:'A2',category:'Work'},
+{id:357,es:'la empresa',en:'company',level:'A1',category:'Work'},
+{id:358,es:'la oficina',en:'office',level:'A1',category:'Work'},
+{id:359,es:'la tienda',en:'shop',level:'A1',category:'Work'},
+{id:360,es:'el despacho',en:'office, study',level:'A2',category:'Work'},
+{id:361,es:'el negocio',en:'business',level:'A2',category:'Work'},
+{id:362,es:'la fábrica',en:'factory',level:'A2',category:'Work'},
+{id:363,es:'la panadería',en:'bakery',level:'A2',category:'Work'},
+{id:364,es:'la librería',en:'bookstore',level:'A2',category:'Work'},
+{id:365,es:'el traje',en:'suit',level:'A2',category:'Work'},
+{id:366,es:'la corbata',en:'tie',level:'A2',category:'Work'},
+{id:367,es:'el uniforme',en:'uniform',level:'A2',category:'Work'},
+{id:368,es:'el trabajo',en:'work, job',level:'A1',category:'Work'},
+{id:369,es:'la profesión',en:'profession',level:'A1',category:'Work'},
+{id:370,es:'dedicarse a',en:'to work as, be engaged in',level:'A1',category:'Work'},
+{id:371,es:'comprar',en:'to buy',level:'A1',category:'Work'},
+{id:372,es:'vender',en:'to sell',level:'A1',category:'Work'},
+{id:373,es:'el cliente / la clienta',en:'client',level:'A2',category:'Work'},
+{id:374,es:'preparar una factura',en:'to prepare an invoice',level:'A2',category:'Work'},
+{id:375,es:'contestar al teléfono',en:'to answer the phone',level:'A2',category:'Work'},
+{id:376,es:'estar en paro',en:'to be unemployed',level:'A1',category:'Work'},
+{id:377,es:'tener una entrevista',en:'to have an interview',level:'A2',category:'Work'},
+{id:378,es:'el currículum',en:'resume, CV',level:'A2',category:'Work'},
+{id:379,es:'las vacaciones',en:'vacation',level:'A1',category:'Work'},
+{id:380,es:'ganar dinero',en:'to earn money',level:'A2',category:'Work'},
+{id:381,es:'estar jubilado/a',en:'to be retired',level:'A2',category:'Work'},
+// --- Leisure & Entertainment ---
+{id:382,es:'el turista / la turista',en:'tourist',level:'A1',category:'Leisure & Entertainment'},
+{id:383,es:'viajar',en:'to travel',level:'A1',category:'Leisure & Entertainment'},
+{id:384,es:'cantar',en:'to sing',level:'A1',category:'Leisure & Entertainment'},
+{id:385,es:'bailar',en:'to dance',level:'A1',category:'Leisure & Entertainment'},
+{id:386,es:'el tiempo libre',en:'free time',level:'A1',category:'Leisure & Entertainment'},
+{id:387,es:'la afición',en:'hobby',level:'A2',category:'Leisure & Entertainment'},
+{id:388,es:'el parque de atracciones',en:'amusement park',level:'A2',category:'Leisure & Entertainment'},
+{id:389,es:'el zoo',en:'zoo',level:'A2',category:'Leisure & Entertainment'},
+{id:390,es:'quedar',en:'to meet up',level:'A2',category:'Leisure & Entertainment'},
+{id:391,es:'salir con amigos',en:'to go out with friends',level:'A2',category:'Leisure & Entertainment'},
+{id:392,es:'la película',en:'movie',level:'A1',category:'Leisure & Entertainment'},
+{id:393,es:'el concierto',en:'concert',level:'A1',category:'Leisure & Entertainment'},
+{id:394,es:'la entrada',en:'ticket',level:'A2',category:'Leisure & Entertainment'},
+{id:395,es:'la invitación',en:'invitation',level:'A2',category:'Leisure & Entertainment'},
+{id:396,es:'la exposición',en:'exhibition',level:'A2',category:'Leisure & Entertainment'},
+{id:397,es:'la obra de teatro',en:'play (theater)',level:'A2',category:'Leisure & Entertainment'},
+{id:398,es:'la ópera',en:'opera',level:'A2',category:'Leisure & Entertainment'},
+{id:399,es:'el musical',en:'musical',level:'A2',category:'Leisure & Entertainment'},
+{id:400,es:'reservar una entrada',en:'to book a ticket',level:'A2',category:'Leisure & Entertainment'},
+{id:401,es:'nadar',en:'to swim',level:'A1',category:'Leisure & Entertainment'},
+{id:402,es:'esquiar',en:'to ski',level:'A1',category:'Leisure & Entertainment'},
+{id:403,es:'jugar al fútbol',en:'to play soccer',level:'A2',category:'Leisure & Entertainment'},
+{id:404,es:'el gimnasio',en:'gym',level:'A2',category:'Leisure & Entertainment'},
+{id:405,es:'la piscina',en:'pool',level:'A2',category:'Leisure & Entertainment'},
+{id:406,es:'montar en bicicleta',en:'to ride a bike',level:'A2',category:'Leisure & Entertainment'},
+{id:407,es:'hacer senderismo',en:'to go hiking',level:'A2',category:'Leisure & Entertainment'},
+{id:408,es:'el juego',en:'game',level:'A1',category:'Leisure & Entertainment'},
+{id:409,es:'jugar a las cartas',en:'to play cards',level:'A2',category:'Leisure & Entertainment'},
+{id:410,es:'el ajedrez',en:'chess',level:'A2',category:'Leisure & Entertainment'},
+// --- Media & Communication ---
+{id:411,es:'la televisión',en:'television',level:'A1',category:'Media & Communication'},
+{id:412,es:'la radio',en:'radio',level:'A1',category:'Media & Communication'},
+{id:413,es:'el teléfono',en:'telephone',level:'A1',category:'Media & Communication'},
+{id:414,es:'el sobre',en:'envelope',level:'A1',category:'Media & Communication'},
+{id:415,es:'el sello',en:'stamp',level:'A1',category:'Media & Communication'},
+{id:416,es:'enviar',en:'to send',level:'A2',category:'Media & Communication'},
+{id:417,es:'recibir',en:'to receive',level:'A2',category:'Media & Communication'},
+{id:418,es:'responder',en:'to reply',level:'A2',category:'Media & Communication'},
+{id:419,es:'el fax',en:'fax',level:'A2',category:'Media & Communication'},
+{id:420,es:'dejar una nota',en:'to leave a note',level:'A2',category:'Media & Communication'},
+{id:421,es:'la tarjeta telefónica',en:'phone card',level:'A2',category:'Media & Communication'},
+{id:422,es:'la cabina',en:'phone booth',level:'A2',category:'Media & Communication'},
+{id:423,es:'llamar por teléfono',en:'to call on the phone',level:'A2',category:'Media & Communication'},
+{id:424,es:'dejar un mensaje',en:'to leave a message',level:'A2',category:'Media & Communication'},
+{id:425,es:'el quiosco',en:'newsstand',level:'A1',category:'Media & Communication'},
+{id:426,es:'el periódico',en:'newspaper',level:'A2',category:'Media & Communication'},
+{id:427,es:'la revista',en:'magazine',level:'A2',category:'Media & Communication'},
+{id:428,es:'la entrevista',en:'interview',level:'A2',category:'Media & Communication'},
+{id:429,es:'el periodista / la periodista',en:'journalist',level:'A2',category:'Media & Communication'},
+{id:430,es:'ver la televisión',en:'to watch TV',level:'A1',category:'Media & Communication'},
+{id:431,es:'escuchar la radio',en:'to listen to the radio',level:'A2',category:'Media & Communication'},
+{id:432,es:'el programa',en:'program, show',level:'A2',category:'Media & Communication'},
+{id:433,es:'los anuncios',en:'ads',level:'A2',category:'Media & Communication'},
+{id:434,es:'la publicidad',en:'advertising',level:'A2',category:'Media & Communication'},
+{id:435,es:'el presentador / la presentadora',en:'TV/radio host',level:'A2',category:'Media & Communication'},
+{id:436,es:'Internet',en:'the Internet',level:'A1',category:'Media & Communication'},
+{id:437,es:'la página web',en:'webpage',level:'A1',category:'Media & Communication'},
+{id:438,es:'la dirección de Internet',en:'web address',level:'A2',category:'Media & Communication'},
+{id:439,es:'el foro',en:'forum',level:'A2',category:'Media & Communication'},
+{id:440,es:'el chat',en:'chat',level:'A2',category:'Media & Communication'},
+{id:441,es:'el virus',en:'virus',level:'A2',category:'Media & Communication'},
+{id:442,es:'navegar por Internet',en:'to browse the Internet',level:'A2',category:'Media & Communication'},
+{id:443,es:'el mensaje electrónico',en:'email message',level:'A2',category:'Media & Communication'},
+// --- Home & Housing ---
+{id:444,es:'alquilar',en:'to rent',level:'A1',category:'Home & Housing'},
+{id:445,es:'el apartamento',en:'apartment',level:'A1',category:'Home & Housing'},
+{id:446,es:'la ventana',en:'window',level:'A1',category:'Home & Housing'},
+{id:447,es:'la puerta',en:'door',level:'A1',category:'Home & Housing'},
+{id:448,es:'el dormitorio',en:'bedroom',level:'A1',category:'Home & Housing'},
+{id:449,es:'la cocina',en:'kitchen',level:'A1',category:'Home & Housing'},
+{id:450,es:'el baño',en:'bathroom',level:'A1',category:'Home & Housing'},
+{id:451,es:'el salón',en:'living room',level:'A1',category:'Home & Housing'},
+{id:452,es:'el garaje',en:'garage',level:'A1',category:'Home & Housing'},
+{id:453,es:'nuevo/a',en:'new',level:'A1',category:'Home & Housing'},
+{id:454,es:'buscar piso',en:'to look for an apartment',level:'A2',category:'Home & Housing'},
+{id:455,es:'compartir piso',en:'to share an apartment',level:'A2',category:'Home & Housing'},
+{id:456,es:'cambiarse de casa',en:'to move house',level:'A2',category:'Home & Housing'},
+{id:457,es:'el estudio',en:'studio apartment',level:'A2',category:'Home & Housing'},
+{id:458,es:'el ascensor',en:'elevator',level:'A2',category:'Home & Housing'},
+{id:459,es:'la escalera',en:'stairs',level:'A2',category:'Home & Housing'},
+{id:460,es:'la terraza',en:'terrace',level:'A2',category:'Home & Housing'},
+{id:461,es:'el jardín',en:'garden',level:'A2',category:'Home & Housing'},
+{id:462,es:'la sala de estar',en:'living room',level:'A2',category:'Home & Housing'},
+{id:463,es:'el edificio',en:'building',level:'A2',category:'Home & Housing'},
+{id:464,es:'el chalé',en:'house, chalet',level:'A2',category:'Home & Housing'},
+{id:465,es:'el pasillo',en:'hallway',level:'A2',category:'Home & Housing'},
+{id:466,es:'el suelo',en:'floor',level:'A2',category:'Home & Housing'},
+{id:467,es:'el techo',en:'ceiling',level:'A2',category:'Home & Housing'},
+{id:468,es:'la pared',en:'wall',level:'A2',category:'Home & Housing'},
+{id:469,es:'el propietario / la propietaria',en:'owner, landlord',level:'A2',category:'Home & Housing'},
+{id:470,es:'amueblado/a',en:'furnished',level:'A2',category:'Home & Housing'},
+{id:471,es:'limpio/a',en:'clean',level:'A2',category:'Home & Housing'},
+{id:472,es:'sucio/a',en:'dirty',level:'A2',category:'Home & Housing'},
+{id:473,es:'limpiar',en:'to clean',level:'A2',category:'Home & Housing'},
+{id:474,es:'lavar los platos',en:'to wash the dishes',level:'A2',category:'Home & Housing'},
+{id:475,es:'lavar la ropa',en:'to do laundry',level:'A2',category:'Home & Housing'},
+{id:476,es:'la cama',en:'bed',level:'A2',category:'Home & Housing'},
+{id:477,es:'el sofá',en:'sofa',level:'A2',category:'Home & Housing'},
+{id:478,es:'el sillón',en:'armchair',level:'A2',category:'Home & Housing'},
+{id:479,es:'la ducha',en:'shower',level:'A2',category:'Home & Housing'},
+{id:480,es:'el lavabo',en:'sink',level:'A2',category:'Home & Housing'},
+{id:481,es:'la nevera',en:'fridge',level:'A2',category:'Home & Housing'},
+{id:482,es:'la lavadora',en:'washing machine',level:'A2',category:'Home & Housing'},
+{id:483,es:'el lavaplatos',en:'dishwasher',level:'A2',category:'Home & Housing'},
+{id:484,es:'el microondas',en:'microwave',level:'A2',category:'Home & Housing'},
+// --- Services ---
+{id:485,es:'la carta',en:'letter',level:'A1',category:'Services'},
+{id:486,es:'la postal',en:'postcard',level:'A1',category:'Services'},
+{id:487,es:'el banco',en:'bank',level:'A1',category:'Services'},
+{id:488,es:'el dinero',en:'money',level:'A1',category:'Services'},
+{id:489,es:'el euro',en:'euro',level:'A1',category:'Services'},
+{id:490,es:'el hospital',en:'hospital',level:'A1',category:'Services'},
+{id:491,es:'el enfermero / la enfermera',en:'nurse',level:'A1',category:'Services'},
+{id:492,es:'la policía',en:'police',level:'A1',category:'Services'},
+{id:493,es:'el bombero / la bombera',en:'firefighter',level:'A1',category:'Services'},
+{id:494,es:'la oficina de correos',en:'post office',level:'A2',category:'Services'},
+{id:495,es:'cambiar dinero',en:'to exchange money',level:'A2',category:'Services'},
+{id:496,es:'la moneda',en:'coin',level:'A2',category:'Services'},
+{id:497,es:'el billete',en:'banknote',level:'A2',category:'Services'},
+{id:498,es:'el cajero automático',en:'ATM',level:'A2',category:'Services'},
+{id:499,es:'la Seguridad Social',en:'Social Security, national health system',level:'A2',category:'Services'},
+{id:500,es:'la ambulancia',en:'ambulance',level:'A2',category:'Services'},
+{id:501,es:'la Cruz Roja',en:'Red Cross',level:'A2',category:'Services'},
+{id:502,es:'la comisaría',en:'police station',level:'A2',category:'Services'},
+{id:503,es:'¡socorro!',en:'help!',level:'A2',category:'Services'},
+{id:504,es:'llamar a la policía',en:'to call the police',level:'A2',category:'Services'},
+{id:505,es:'el teléfono de emergencia',en:'emergency phone number',level:'A2',category:'Services'},
+// --- Shopping & Money ---
+{id:506,es:'el mercado',en:'market',level:'A1',category:'Shopping & Money'},
+{id:507,es:'la salida',en:'exit',level:'A1',category:'Shopping & Money'},
+{id:508,es:'la información',en:'information',level:'A1',category:'Shopping & Money'},
+{id:509,es:'el comprador / la compradora',en:'buyer',level:'A1',category:'Shopping & Money'},
+{id:510,es:'el vendedor / la vendedora',en:'seller',level:'A1',category:'Shopping & Money'},
+{id:511,es:'los pantalones',en:'pants',level:'A1',category:'Shopping & Money'},
+{id:512,es:'la falda',en:'skirt',level:'A1',category:'Shopping & Money'},
+{id:513,es:'la camisa',en:'shirt',level:'A1',category:'Shopping & Money'},
+{id:514,es:'el jersey',en:'sweater',level:'A1',category:'Shopping & Money'},
+{id:515,es:'los zapatos',en:'shoes',level:'A1',category:'Shopping & Money'},
+{id:516,es:'la docena',en:'dozen',level:'A1',category:'Shopping & Money'},
+{id:517,es:'el paquete',en:'package',level:'A1',category:'Shopping & Money'},
+{id:518,es:'la caja',en:'box',level:'A1',category:'Shopping & Money'},
+{id:519,es:'el litro',en:'liter',level:'A1',category:'Shopping & Money'},
+{id:520,es:'el kilo',en:'kilo',level:'A1',category:'Shopping & Money'},
+{id:521,es:'el precio',en:'price',level:'A1',category:'Shopping & Money'},
+{id:522,es:'caro/a',en:'expensive',level:'A1',category:'Shopping & Money'},
+{id:523,es:'barato/a',en:'cheap',level:'A1',category:'Shopping & Money'},
+{id:524,es:'el centro comercial',en:'shopping mall',level:'A2',category:'Shopping & Money'},
+{id:525,es:'la papelería',en:'stationery store',level:'A2',category:'Shopping & Money'},
+{id:526,es:'la peluquería',en:'hair salon',level:'A2',category:'Shopping & Money'},
+{id:527,es:'el estanco',en:'tobacco shop',level:'A2',category:'Shopping & Money'},
+{id:528,es:'la frutería',en:'fruit shop',level:'A2',category:'Shopping & Money'},
+{id:529,es:'la carnicería',en:'butcher shop',level:'A2',category:'Shopping & Money'},
+{id:530,es:'la agencia de viajes',en:'travel agency',level:'A2',category:'Shopping & Money'},
+{id:531,es:'el frutero / la frutera',en:'fruit seller',level:'A2',category:'Shopping & Money'},
+{id:532,es:'el carnicero / la carnicera',en:'butcher',level:'A2',category:'Shopping & Money'},
+{id:533,es:'el panadero / la panadera',en:'baker',level:'A2',category:'Shopping & Money'},
+{id:534,es:'devolver',en:'to return (an item)',level:'A2',category:'Shopping & Money'},
+{id:535,es:'ir de compras',en:'to go shopping',level:'A2',category:'Shopping & Money'},
+{id:536,es:'hacer la compra',en:'to do the grocery shopping',level:'A2',category:'Shopping & Money'},
+{id:537,es:'la blusa',en:'blouse',level:'A2',category:'Shopping & Money'},
+{id:538,es:'el pijama',en:'pajamas',level:'A2',category:'Shopping & Money'},
+{id:539,es:'la cazadora',en:'jacket',level:'A2',category:'Shopping & Money'},
+{id:540,es:'los guantes',en:'gloves',level:'A2',category:'Shopping & Money'},
+{id:541,es:'la bufanda',en:'scarf',level:'A2',category:'Shopping & Money'},
+{id:542,es:'los calcetines',en:'socks',level:'A2',category:'Shopping & Money'},
+{id:543,es:'el bañador',en:'swimsuit',level:'A2',category:'Shopping & Money'},
+{id:544,es:'las botas',en:'boots',level:'A2',category:'Shopping & Money'},
+{id:545,es:'el probador',en:'fitting room',level:'A2',category:'Shopping & Money'},
+{id:546,es:'ponerse',en:'to put on',level:'A2',category:'Shopping & Money'},
+{id:547,es:'quitarse',en:'to take off',level:'A2',category:'Shopping & Money'},
+{id:548,es:'probarse',en:'to try on',level:'A2',category:'Shopping & Money'},
+{id:549,es:'medio kilo',en:'half a kilo',level:'A2',category:'Shopping & Money'},
+{id:550,es:'el gramo',en:'gram',level:'A2',category:'Shopping & Money'},
+{id:551,es:'hacer la lista de la compra',en:'to make the shopping list',level:'A2',category:'Shopping & Money'},
+{id:552,es:'pesar',en:'to weigh',level:'A2',category:'Shopping & Money'},
+{id:553,es:'pagar con tarjeta',en:'to pay by card',level:'A2',category:'Shopping & Money'},
+{id:554,es:'la propina',en:'tip',level:'A2',category:'Shopping & Money'},
+{id:555,es:'el IVA',en:'VAT, sales tax',level:'A2',category:'Shopping & Money'},
+{id:556,es:'pagar en efectivo',en:'to pay in cash',level:'A2',category:'Shopping & Money'},
+// --- Health & Hygiene ---
+{id:557,es:'estar enfermo/a',en:'to be sick',level:'A1',category:'Health & Hygiene'},
+{id:558,es:'sentirse bien/mal',en:'to feel good/bad',level:'A1',category:'Health & Hygiene'},
+{id:559,es:'tener dolor de cabeza',en:'to have a headache',level:'A1',category:'Health & Hygiene'},
+{id:560,es:'doler',en:'to hurt',level:'A1',category:'Health & Hygiene'},
+{id:561,es:'estar cansado/a',en:'to be tired',level:'A1',category:'Health & Hygiene'},
+{id:562,es:'la farmacia',en:'pharmacy',level:'A1',category:'Health & Hygiene'},
+{id:563,es:'el jabón',en:'soap',level:'A1',category:'Health & Hygiene'},
+{id:564,es:'bañarse',en:'to bathe',level:'A1',category:'Health & Hygiene'},
+{id:565,es:'tener gripe',en:'to have the flu',level:'A2',category:'Health & Hygiene'},
+{id:566,es:'tener alergia',en:'to have an allergy',level:'A2',category:'Health & Hygiene'},
+{id:567,es:'tener fiebre',en:'to have a fever',level:'A2',category:'Health & Hygiene'},
+{id:568,es:'tener tos',en:'to have a cough',level:'A2',category:'Health & Hygiene'},
+{id:569,es:'llevar una vida sana',en:'to live a healthy life',level:'A2',category:'Health & Hygiene'},
+{id:570,es:'tener una enfermedad',en:'to have an illness',level:'A2',category:'Health & Hygiene'},
+{id:571,es:'tener dolor de espalda',en:'to have back pain',level:'A2',category:'Health & Hygiene'},
+{id:572,es:'tener dolor de estómago',en:'to have a stomachache',level:'A2',category:'Health & Hygiene'},
+{id:573,es:'ir al hospital',en:'to go to the hospital',level:'A2',category:'Health & Hygiene'},
+{id:574,es:'ir al médico',en:'to go to the doctor',level:'A2',category:'Health & Hygiene'},
+{id:575,es:'urgencias',en:'emergency room',level:'A2',category:'Health & Hygiene'},
+{id:576,es:'tomar una medicina',en:'to take medicine',level:'A2',category:'Health & Hygiene'},
+{id:577,es:'el medicamento',en:'medication',level:'A2',category:'Health & Hygiene'},
+{id:578,es:'la bañera',en:'bathtub',level:'A2',category:'Health & Hygiene'},
+{id:579,es:'la toalla',en:'towel',level:'A2',category:'Health & Hygiene'},
+{id:580,es:'el champú',en:'shampoo',level:'A2',category:'Health & Hygiene'},
+{id:581,es:'el gel',en:'shower gel',level:'A2',category:'Health & Hygiene'},
+{id:582,es:'la crema',en:'cream, lotion',level:'A2',category:'Health & Hygiene'},
+{id:583,es:'el desodorante',en:'deodorant',level:'A2',category:'Health & Hygiene'},
+{id:584,es:'el cepillo de dientes',en:'toothbrush',level:'A2',category:'Health & Hygiene'},
+{id:585,es:'la pasta de dientes',en:'toothpaste',level:'A2',category:'Health & Hygiene'},
+{id:586,es:'cepillarse los dientes',en:"to brush one's teeth",level:'A2',category:'Health & Hygiene'},
+// --- Travel & Transport ---
+{id:587,es:'el mapa',en:'map',level:'A1',category:'Travel & Transport'},
+{id:588,es:'el hotel',en:'hotel',level:'A1',category:'Travel & Transport'},
+{id:589,es:'el aeropuerto',en:'airport',level:'A1',category:'Travel & Transport'},
+{id:590,es:'el avión',en:'airplane',level:'A1',category:'Travel & Transport'},
+{id:591,es:'el coche',en:'car',level:'A1',category:'Travel & Transport'},
+{id:592,es:'el metro',en:'subway',level:'A1',category:'Travel & Transport'},
+{id:593,es:'el tren',en:'train',level:'A1',category:'Travel & Transport'},
+{id:594,es:'el autobús',en:'bus',level:'A1',category:'Travel & Transport'},
+{id:595,es:'el taxi',en:'taxi',level:'A1',category:'Travel & Transport'},
+{id:596,es:'la playa',en:'beach',level:'A1',category:'Travel & Transport'},
+{id:597,es:'la montaña',en:'mountain',level:'A1',category:'Travel & Transport'},
+{id:598,es:'(des)hacer las maletas',en:'to pack/unpack',level:'A2',category:'Travel & Transport'},
+{id:599,es:'reservar un billete',en:'to book a ticket',level:'A2',category:'Travel & Transport'},
+{id:600,es:'el guía turístico',en:'tour guide',level:'A2',category:'Travel & Transport'},
+{id:601,es:'el vuelo',en:'flight',level:'A2',category:'Travel & Transport'},
+{id:602,es:'la excursión',en:'excursion',level:'A2',category:'Travel & Transport'},
+{id:603,es:'la mochila',en:'backpack',level:'A2',category:'Travel & Transport'},
+{id:604,es:'el abrigo',en:'coat',level:'A2',category:'Travel & Transport'},
+{id:605,es:'el gorro',en:'beanie, hat',level:'A2',category:'Travel & Transport'},
+{id:606,es:'la pensión completa',en:'full board',level:'A2',category:'Travel & Transport'},
+{id:607,es:'la media pensión',en:'half board',level:'A2',category:'Travel & Transport'},
+{id:608,es:'reservar',en:'to book, to reserve',level:'A2',category:'Travel & Transport'},
+{id:609,es:'hacer una reserva',en:'to make a reservation',level:'A2',category:'Travel & Transport'},
+{id:610,es:'la carretera',en:'road, highway',level:'A2',category:'Travel & Transport'},
+{id:611,es:'el puerto',en:'port',level:'A2',category:'Travel & Transport'},
+{id:612,es:'la parada de autobús',en:'bus stop',level:'A2',category:'Travel & Transport'},
+{id:613,es:'andando',en:'on foot',level:'A2',category:'Travel & Transport'},
+{id:614,es:'el conductor / la conductora',en:'driver',level:'A2',category:'Travel & Transport'},
+{id:615,es:'el aparcamiento',en:'parking lot',level:'A2',category:'Travel & Transport'},
+{id:616,es:'el barco',en:'boat',level:'A2',category:'Travel & Transport'},
+{id:617,es:'el ciclista / la ciclista',en:'cyclist',level:'A2',category:'Travel & Transport'},
+{id:618,es:'el piloto / la piloto',en:'pilot',level:'A2',category:'Travel & Transport'},
+{id:619,es:'la azafata',en:'flight attendant',level:'A2',category:'Travel & Transport'},
+{id:620,es:'la rueda',en:'wheel',level:'A2',category:'Travel & Transport'},
+{id:621,es:'el mecánico / la mecánica',en:'mechanic',level:'A2',category:'Travel & Transport'},
+{id:622,es:'lavar el coche',en:'to wash the car',level:'A2',category:'Travel & Transport'},
+// --- Nature & Geography ---
+{id:623,es:'el sol',en:'sun',level:'A1',category:'Nature & Geography'},
+{id:624,es:'el lugar',en:'place',level:'A1',category:'Nature & Geography'},
+{id:625,es:'el centro',en:'downtown, center',level:'A1',category:'Nature & Geography'},
+{id:626,es:'el parque',en:'park',level:'A1',category:'Nature & Geography'},
+{id:627,es:'el campo',en:'countryside',level:'A1',category:'Nature & Geography'},
+{id:628,es:'la primavera',en:'spring',level:'A1',category:'Nature & Geography'},
+{id:629,es:'el verano',en:'summer',level:'A1',category:'Nature & Geography'},
+{id:630,es:'el otoño',en:'autumn',level:'A1',category:'Nature & Geography'},
+{id:631,es:'el invierno',en:'winter',level:'A1',category:'Nature & Geography'},
+{id:632,es:'llover',en:'to rain',level:'A1',category:'Nature & Geography'},
+{id:633,es:'nevar',en:'to snow',level:'A1',category:'Nature & Geography'},
+{id:634,es:'hacer frío',en:'to be cold (weather)',level:'A1',category:'Nature & Geography'},
+{id:635,es:'hacer calor',en:'to be hot (weather)',level:'A1',category:'Nature & Geography'},
+{id:636,es:'hacer sol',en:'to be sunny',level:'A1',category:'Nature & Geography'},
+{id:637,es:'hacer viento',en:'to be windy',level:'A1',category:'Nature & Geography'},
+{id:638,es:'el animal',en:'animal',level:'A1',category:'Nature & Geography'},
+{id:639,es:'el perro',en:'dog',level:'A1',category:'Nature & Geography'},
+{id:640,es:'el gato',en:'cat',level:'A1',category:'Nature & Geography'},
+{id:641,es:'el pájaro',en:'bird',level:'A1',category:'Nature & Geography'},
+{id:642,es:'el pez',en:'fish (animal)',level:'A1',category:'Nature & Geography'},
+{id:643,es:'la planta',en:'plant',level:'A1',category:'Nature & Geography'},
+{id:644,es:'la flor',en:'flower',level:'A1',category:'Nature & Geography'},
+{id:645,es:'el árbol',en:'tree',level:'A1',category:'Nature & Geography'},
+{id:646,es:'rojo/a',en:'red',level:'A1',category:'Nature & Geography'},
+{id:647,es:'amarillo/a',en:'yellow',level:'A1',category:'Nature & Geography'},
+{id:648,es:'blanco/a',en:'white',level:'A1',category:'Nature & Geography'},
+{id:649,es:'gris',en:'gray',level:'A1',category:'Nature & Geography'},
+{id:650,es:'el mundo',en:'world',level:'A2',category:'Nature & Geography'},
+{id:651,es:'el cielo',en:'sky',level:'A2',category:'Nature & Geography'},
+{id:652,es:'la luna',en:'moon',level:'A2',category:'Nature & Geography'},
+{id:653,es:'la estrella',en:'star',level:'A2',category:'Nature & Geography'},
+{id:654,es:'el planeta',en:'planet',level:'A2',category:'Nature & Geography'},
+{id:655,es:'la región',en:'region',level:'A2',category:'Nature & Geography'},
+{id:656,es:'norte',en:'north',level:'A2',category:'Nature & Geography'},
+{id:657,es:'sur',en:'south',level:'A2',category:'Nature & Geography'},
+{id:658,es:'este',en:'east',level:'A2',category:'Nature & Geography'},
+{id:659,es:'oeste',en:'west',level:'A2',category:'Nature & Geography'},
+{id:660,es:'el mar',en:'sea',level:'A2',category:'Nature & Geography'},
+{id:661,es:'el río',en:'river',level:'A2',category:'Nature & Geography'},
+{id:662,es:'la isla',en:'island',level:'A2',category:'Nature & Geography'},
+{id:663,es:'el desierto',en:'desert',level:'A2',category:'Nature & Geography'},
+{id:664,es:'el bosque',en:'forest',level:'A2',category:'Nature & Geography'},
+{id:665,es:'la costa',en:'coast',level:'A2',category:'Nature & Geography'},
+{id:666,es:'el habitante',en:'inhabitant',level:'A2',category:'Nature & Geography'},
+{id:667,es:'el barrio',en:'neighborhood',level:'A2',category:'Nature & Geography'},
+{id:668,es:'la esquina',en:'corner',level:'A2',category:'Nature & Geography'},
+{id:669,es:'el ayuntamiento',en:'city hall',level:'A2',category:'Nature & Geography'},
+{id:670,es:'la catedral',en:'cathedral',level:'A2',category:'Nature & Geography'},
+{id:671,es:'el castillo',en:'castle',level:'A2',category:'Nature & Geography'},
+{id:672,es:'el palacio',en:'palace',level:'A2',category:'Nature & Geography'},
+{id:673,es:'el monumento',en:'monument',level:'A2',category:'Nature & Geography'},
+{id:674,es:'la estatua',en:'statue',level:'A2',category:'Nature & Geography'},
+{id:675,es:'la naturaleza',en:'nature',level:'A2',category:'Nature & Geography'},
+{id:676,es:'la lluvia',en:'rain',level:'A2',category:'Nature & Geography'},
+{id:677,es:'la nieve',en:'snow',level:'A2',category:'Nature & Geography'},
+{id:678,es:'la niebla',en:'fog',level:'A2',category:'Nature & Geography'},
+{id:679,es:'la tormenta',en:'storm',level:'A2',category:'Nature & Geography'},
+{id:680,es:'la nube',en:'cloud',level:'A2',category:'Nature & Geography'},
+{id:681,es:'el aire',en:'air, wind',level:'A2',category:'Nature & Geography'},
+{id:682,es:'el caballo',en:'horse',level:'A2',category:'Nature & Geography'},
+{id:683,es:'la vaca',en:'cow',level:'A2',category:'Nature & Geography'},
+{id:684,es:'el cerdo',en:'pig',level:'A2',category:'Nature & Geography'},
+{id:685,es:'la mosca',en:'fly (insect)',level:'A2',category:'Nature & Geography'},
+{id:686,es:'el mosquito',en:'mosquito',level:'A2',category:'Nature & Geography'},
+{id:687,es:'la rosa',en:'rose',level:'A2',category:'Nature & Geography'},
+{id:688,es:'rosa',en:'pink',level:'A2',category:'Nature & Geography'},
+{id:689,es:'naranja',en:'orange (color)',level:'A2',category:'Nature & Geography'},
+// --- Society & Culture ---
+{id:690,es:'el cine',en:'cinema',level:'A1',category:'Society & Culture'},
+{id:691,es:'el teatro',en:'theater',level:'A1',category:'Society & Culture'},
+{id:692,es:'la música',en:'music',level:'A1',category:'Society & Culture'},
+{id:693,es:'la foto',en:'photo',level:'A1',category:'Society & Culture'},
+{id:694,es:'el museo',en:'museum',level:'A1',category:'Society & Culture'},
+{id:695,es:'el arte',en:'art',level:'A1',category:'Society & Culture'},
+{id:696,es:'el presidente / la presidenta',en:'president',level:'A1',category:'Society & Culture'},
+{id:697,es:'el rey',en:'king',level:'A1',category:'Society & Culture'},
+{id:698,es:'la reina',en:'queen',level:'A1',category:'Society & Culture'},
+{id:699,es:'la religión',en:'religion',level:'A1',category:'Society & Culture'},
+{id:700,es:'la ciencia',en:'science',level:'A1',category:'Society & Culture'},
+{id:701,es:'la tecnología',en:'technology',level:'A1',category:'Society & Culture'},
+{id:702,es:'el número',en:'number',level:'A1',category:'Society & Culture'},
+{id:703,es:'la iglesia',en:'church',level:'A1',category:'Society & Culture'},
+{id:704,es:'el/la cantante',en:'singer',level:'A1',category:'Society & Culture'},
+{id:705,es:'el artista / la artista',en:'artist',level:'A2',category:'Society & Culture'},
+{id:706,es:'la fotografía',en:'photography',level:'A2',category:'Society & Culture'},
+{id:707,es:'la literatura',en:'literature',level:'A2',category:'Society & Culture'},
+{id:708,es:'el escritor / la escritora',en:'writer',level:'A2',category:'Society & Culture'},
+{id:709,es:'la novela',en:'novel',level:'A2',category:'Society & Culture'},
+{id:710,es:'la poesía',en:'poetry',level:'A2',category:'Society & Culture'},
+{id:711,es:'el actor / la actriz',en:'actor/actress',level:'A2',category:'Society & Culture'},
+{id:712,es:'el gobierno',en:'government',level:'A2',category:'Society & Culture'},
+{id:713,es:'la política',en:'politics',level:'A2',category:'Society & Culture'},
+{id:714,es:'cristiano/a',en:'Christian',level:'A2',category:'Society & Culture'},
+{id:715,es:'la Navidad',en:'Christmas',level:'A2',category:'Society & Culture'},
+{id:716,es:'el científico / la científica',en:'scientist',level:'A2',category:'Society & Culture'},
+{id:717,es:'la informática',en:'computer science',level:'A2',category:'Society & Culture'},
+];
+const VOCAB_CATEGORIES = [...new Set(VOCAB.map(function(v){ return v.category; }))];
+function vocabKey(item){ return 'vc::'+item.id; }
+function buildVocabQuestion(item){ return { key: vocabKey(item), item, sentence: item.en, answer: item.es }; }
+
+function phraseKey(phrase){ return 'ph::'+phrase.id; }
+function buildPhraseQuestion(phrase){ return { key: phraseKey(phrase), phrase, sentence: phrase.en, answer: phrase.es }; }
+
+/* ============================================================
+   LEITNER BOX SCHEDULING
+   ============================================================ */
+const BOX_INTERVALS = [1, 2, 4, 8, 16]; // days, index by box-1
+function todayStr(){ return new Date().toISOString().slice(0,10); }
+function addDays(dateStr, days){
+  const d = new Date(dateStr+"T00:00:00Z");
+  d.setUTCDate(d.getUTCDate()+days);
+  return d.toISOString().slice(0,10);
+}
+function scheduleAfterAnswer(item, correct, today){
+  const next = item ? Object.assign({}, item) : {box:0, due:today, seen:0, correct:0};
+  next.seen += 1;
+  if(correct){
+    next.correct += 1;
+    next.box = Math.min((next.box||0)+1, 5);
+    next.due = addDays(today, BOX_INTERVALS[next.box-1]);
+  } else {
+    next.box = 1;
+    next.due = today;
+  }
+  return next;
+}
+function isDue(item, today){ return !item || item.due <= today; }
+function weight(item){ if(!item) return 6; return Math.max(1, 6-item.box); }
+function itemKey(verb, cat){ return verb.inf+"::"+cat; }
+
+/* ============================================================
+   QUESTION GENERATION
+   ============================================================ */
+const CATEGORY_META = {
+  present:{label:"Presente", short:"PRES"}, preterite:{label:"Pretérito", short:"PRET"},
+  imperfect:{label:"Imperfecto", short:"IMPF"}, future:{label:"Futuro", short:"FUT"},
+  impInformal:{label:"Mandato informal", short:"INFORMAL"}, impFormal:{label:"Mandato formal", short:"FORMAL"},
+};
+const CATEGORY_KEYS = Object.keys(CATEGORY_META);
+const TABLE_TENSES = ["present","preterite","imperfect","future"];
+const INDICATIVE_LABELS = ["yo","tú","él / ella / usted","nosotros","vosotros","ellos / ellas / ustedes"];
+const SUBJ_OPTIONS = [["I"],["you"],["he","she"],["we"],["you all"],["they"]];
+const VERBS_BY_INF = Object.fromEntries(VERBS.map(v=>[v.inf,v]));
+
+function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+
+function buildQuestion(verb, cat){
+  let answer, personLabel, subj="", idx=0;
+  if(cat==="impInformal"){
+    const which = Math.random()<0.5 ? "tu" : "vosotros";
+    answer = which==="tu" ? tuCommand(verb) : vosotrosCommand(verb);
+    personLabel = which==="tu" ? "tú" : "vosotros";
+  } else if(cat==="impFormal"){
+    const which = Math.random()<0.5 ? "usted" : "ustedes";
+    answer = formalCommand(verb, which);
+    personLabel = which;
+  } else {
+    idx = Math.floor(Math.random()*6);
+    answer = conjugate(verb, cat, idx);
+    personLabel = INDICATIVE_LABELS[idx];
+    subj = pick(SUBJ_OPTIONS[idx]);
+  }
+  const form = englishForm(verb, cat, idx);
+  const Subj = subj ? subj.charAt(0).toUpperCase()+subj.slice(1) : "";
+  let sentence;
+  switch(cat){
+    case "present": sentence = "Every day, "+Subj+" "+form+"."; break;
+    case "preterite": sentence = "Yesterday, "+Subj+" "+form+"."; break;
+    case "imperfect": sentence = "In the past, "+Subj+" "+form+"."; break;
+    case "future": sentence = "Tomorrow, "+Subj+" "+form+"."; break;
+    case "impInformal": sentence = form.charAt(0).toUpperCase()+form.slice(1)+" right now!"; break;
+    case "impFormal": sentence = form.charAt(0).toUpperCase()+form.slice(1)+", please."; break;
+  }
+  return { key: itemKey(verb,cat), cat, verb, personLabel, sentence, answer, idx };
+}
+
+function buildFullTable(verb){
+  const rows = INDICATIVE_LABELS.map((label, idx)=>({ label, forms: TABLE_TENSES.map(t=>conjugate(verb,t,idx)) }));
+  let imperativeRow = null;
+  if(!verb.noImperative){
+    imperativeRow = [
+      {key:"tú", form:tuCommand(verb)},
+      {key:"vosotros", form:vosotrosCommand(verb)},
+      {key:"usted", form:formalCommand(verb,"usted")},
+      {key:"ustedes", form:formalCommand(verb,"ustedes")},
+    ];
+  }
+  return { rows, imperativeRow };
+}
+
+/* ============================================================
+   STATE + PERSISTENCE
+   ============================================================ */
+const state = {
+  mode: 'verbs',
+  phraseLevel: 'A1',
+  vocabLevel: 'A1',
+  verbs: {
+    activeCats: new Set(CATEGORY_KEYS),
+    leitner: {},
+    stats: {seen:0, correct:0, byCat:{}},
+    sessionRequeue: [],
+  },
+  phrases: {
+    leitner: {},
+    stats: {seen:0, correct:0},
+    sessionRequeue: [],
+  },
+  vocab: {
+    leitner: {},
+    stats: {seen:0, correct:0},
+    sessionRequeue: [],
+    activeCategories: new Set(VOCAB_CATEGORIES),
+  },
+  cardNo: 0,
+  stage: 0,
+  question: null,
+  loaded: false,
+};
+
+function cur(){
+  if(state.mode==='verbs') return state.verbs;
+  if(state.mode==='phrases') return state.phrases;
+  return state.vocab;
+}
+
+function activeCatList(){ return CATEGORY_KEYS.filter(k=>state.verbs.activeCats.has(k)); }
+
+function pickQuestion(){
+  if(state.mode==='verbs') return pickVerbQuestion();
+  if(state.mode==='phrases') return pickPhraseQuestion();
+  return pickVocabQuestion();
+}
+
+function pickFromPool(items, store, buildFn){
+  const today = todayStr();
+  const requeue = store.sessionRequeue;
+  const itemKeys = new Set(items.map(function(it){ return buildFn(it).key; }));
+  const readyIdx = requeue.findIndex(function(r){ return r.showAfterCard <= state.cardNo && itemKeys.has(r.key); });
+  if(readyIdx !== -1){
+    const chosen = requeue.splice(readyIdx,1)[0];
+    const found = items.find(function(it){ return buildFn(it).key===chosen.key; });
+    if(found) return buildFn(found);
+  }
+  const pool = [];
+  for(const it of items){
+    const q = buildFn(it);
+    const item = store.leitner[q.key];
+    if(isDue(item, today)) pool.push({ it, w: weight(item) });
+  }
+  if(!pool.length) return buildFn(pick(items));
+  const totalW = pool.reduce((s,p)=>s+p.w,0);
+  let r = Math.random()*totalW;
+  for(const p of pool){ r -= p.w; if(r<=0) return buildFn(p.it); }
+  return buildFn(pool[pool.length-1].it);
+}
+
+function pickVerbQuestion(){
+  const cats = activeCatList();
+  const today = todayStr();
+  const requeue = state.verbs.sessionRequeue;
+
+  const readyIdx = requeue.findIndex(r => r.showAfterCard <= state.cardNo && cats.includes(r.cat));
+  if(readyIdx !== -1){
+    const chosen = requeue.splice(readyIdx,1)[0];
+    const verb = VERBS_BY_INF[chosen.verbInf];
+    if(verb) return buildQuestion(verb, chosen.cat);
+  }
+
+  const pool = [];
+  for(const verb of VERBS){
+    for(const cat of cats){
+      if((cat==="impInformal"||cat==="impFormal") && verb.noImperative) continue;
+      const item = state.verbs.leitner[itemKey(verb,cat)];
+      if(isDue(item, today)) pool.push({ verb, cat, w: weight(item) });
+    }
+  }
+  if(!pool.length){
+    const verb = pick(VERBS);
+    const cat = pick(cats.filter(c=>!((c==="impInformal"||c==="impFormal")&&verb.noImperative)));
+    return buildQuestion(verb, cat || cats[0]);
+  }
+  const totalW = pool.reduce((s,p)=>s+p.w,0);
+  let r = Math.random()*totalW;
+  for(const p of pool){ r -= p.w; if(r<=0) return buildQuestion(p.verb, p.cat); }
+  const last = pool[pool.length-1];
+  return buildQuestion(last.verb, last.cat);
+}
+
+function pickPhraseQuestion(){
+  const levelPhrases = PHRASES.filter(function(p){ return p.level===state.phraseLevel; });
+  return pickFromPool(levelPhrases, state.phrases, buildPhraseQuestion);
+}
+
+function pickVocabQuestion(){
+  let levelVocab = VOCAB.filter(function(v){ return v.level===state.vocabLevel && state.vocab.activeCategories.has(v.category); });
+  if(!levelVocab.length) levelVocab = VOCAB.filter(function(v){ return v.level===state.vocabLevel; });
+  return pickFromPool(levelVocab, state.vocab, buildVocabQuestion);
+}
+
+function dueReviewCount(){
+  const today = todayStr();
+  if(state.mode==='verbs'){
+    const cats = activeCatList();
+    let n = 0;
+    for(const verb of VERBS){
+      for(const cat of cats){
+        if((cat==="impInformal"||cat==="impFormal") && verb.noImperative) continue;
+        const item = state.verbs.leitner[itemKey(verb,cat)];
+        if(item && item.seen>0 && isDue(item, today)) n++;
+      }
+    }
+    return n;
+  }
+  if(state.mode==='phrases'){
+    let n = 0;
+    for(const phrase of PHRASES){
+      if(phrase.level!==state.phraseLevel) continue;
+      const item = state.phrases.leitner[phraseKey(phrase)];
+      if(item && item.seen>0 && isDue(item, today)) n++;
+    }
+    return n;
+  }
+  let n = 0;
+  for(const v of VOCAB){
+    if(v.level!==state.vocabLevel || !state.vocab.activeCategories.has(v.category)) continue;
+    const item = state.vocab.leitner[vocabKey(v)];
+    if(item && item.seen>0 && isDue(item, today)) n++;
+  }
+  return n;
+}
+
+let saveTimer = null;
+function persist(){
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(()=>{
+    const payload = JSON.stringify({
+      leitner: state.verbs.leitner, stats: state.verbs.stats, activeCats: Array.from(state.verbs.activeCats),
+      phrases: { leitner: state.phrases.leitner, stats: state.phrases.stats }, phraseLevel: state.phraseLevel,
+      vocab: { leitner: state.vocab.leitner, stats: state.vocab.stats, activeCategories: Array.from(state.vocab.activeCategories) }, vocabLevel: state.vocabLevel
+    });
+    if(window.google && google.script && google.script.run){
+      google.script.run.saveProgress(payload);
+    } else {
+      try{ localStorage.setItem('verbario-progress', payload); }catch(e){}
+    }
+  }, 300);
+}
+
+function loadAndStart(){
+  function onLoaded(jsonStr){
+    try{
+      const data = JSON.parse(jsonStr || '{}');
+      state.verbs.leitner = data.leitner || {};
+      state.verbs.stats = data.stats || {seen:0, correct:0, byCat:{}};
+      if(data.activeCats && data.activeCats.length) state.verbs.activeCats = new Set(data.activeCats);
+      if(data.phrases){
+        state.phrases.leitner = data.phrases.leitner || {};
+        state.phrases.stats = data.phrases.stats || {seen:0, correct:0};
+      }
+      if(data.phraseLevel) state.phraseLevel = data.phraseLevel;
+      if(data.vocab){
+        state.vocab.leitner = data.vocab.leitner || {};
+        state.vocab.stats = data.vocab.stats || {seen:0, correct:0};
+        if(data.vocab.activeCategories && data.vocab.activeCategories.length) state.vocab.activeCategories = new Set(data.vocab.activeCategories);
+      }
+      if(data.vocabLevel) state.vocabLevel = data.vocabLevel;
+    }catch(e){}
+    state.loaded = true;
+    state.cardNo = 1;
+    state.question = pickQuestion();
+    render();
+  }
+  if(window.google && google.script && google.script.run){
+    google.script.run.withSuccessHandler(onLoaded).withFailureHandler(function(){ onLoaded('{}'); }).loadProgress();
+  } else {
+    let raw = '{}';
+    try{ raw = localStorage.getItem('verbario-progress') || '{}'; }catch(e){}
+    onLoaded(raw);
+  }
+}
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+function nextQuestion(){
+  state.question = pickQuestion();
+  state.stage = 0;
+  state.cardNo += 1;
+  render();
+}
+function toggleCategory(key){
+  if(state.verbs.activeCats.has(key)){
+    if(state.verbs.activeCats.size===1) return;
+    state.verbs.activeCats.delete(key);
+  } else {
+    state.verbs.activeCats.add(key);
+  }
+  persist();
+  nextQuestion();
+}
+function setMode(mode){
+  if(state.mode===mode) return;
+  state.mode = mode;
+  state.stage = 0;
+  state.cardNo = 1;
+  state.question = pickQuestion();
+  render();
+}
+function setLevel(level){
+  if(state.mode==='phrases'){
+    if(state.phraseLevel===level) return;
+    state.phraseLevel = level;
+  } else if(state.mode==='vocab'){
+    if(state.vocabLevel===level) return;
+    state.vocabLevel = level;
+  } else {
+    return;
+  }
+  state.stage = 0;
+  state.cardNo = 1;
+  persist();
+  state.question = pickQuestion();
+  render();
+}
+function toggleVocabCategory(cat){
+  if(state.vocab.activeCategories.has(cat)){
+    if(state.vocab.activeCategories.size===1) return;
+    state.vocab.activeCategories.delete(cat);
+  } else {
+    state.vocab.activeCategories.add(cat);
+  }
+  persist();
+  nextQuestion();
+}
+function showInfinitive(){ state.stage = 1; render(); }
+function showAnswer(){ state.stage = 2; render(); }
+function reportResult(gotIt){
+  const q = state.question;
+  const today = todayStr();
+  const data = cur();
+  data.leitner[q.key] = scheduleAfterAnswer(data.leitner[q.key], gotIt, today);
+  data.stats.seen += 1;
+  if(gotIt) data.stats.correct += 1;
+  if(state.mode==='verbs'){
+    const catStat = data.stats.byCat[q.cat] || {seen:0, correct:0};
+    catStat.seen += 1; if(gotIt) catStat.correct += 1;
+    data.stats.byCat[q.cat] = catStat;
+    if(!gotIt){
+      data.sessionRequeue.push({ verbInf:q.verb.inf, cat:q.cat, showAfterCard: state.cardNo + 3 + Math.floor(Math.random()*4) });
+    }
+  } else {
+    if(!gotIt){
+      data.sessionRequeue.push({ key:q.key, showAfterCard: state.cardNo + 3 + Math.floor(Math.random()*4) });
+    }
+  }
+  persist();
+  nextQuestion();
+}
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function escAttr(s){ return esc(s).replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+function speak(text){
+  if(!('speechSynthesis' in window) || !text) return;
+  const clean = text.split('/')[0].trim();
+  const u = new SpeechSynthesisUtterance(clean);
+  u.lang = 'es-ES';
+  u.rate = 0.95;
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(u);
+}
+
+function renderModeTabs(){
+  const el = document.getElementById('modeTabs');
+  el.innerHTML = [['verbs','VERBS'],['phrases','PHRASES'],['vocab','VOCABULARY']].map(function(pair){
+    const m = pair[0], label = pair[1];
+    const active = state.mode===m;
+    return '<button class="tab'+(active?' active':'')+'" data-action="setMode" data-mode="'+m+'">'+label+'</button>';
+  }).join('');
+}
+
+function renderSubtitle(){
+  const el = document.getElementById('subtitle');
+  let text;
+  if(state.mode==='verbs') text = '100 essential Spanish verbs, spaced out with a Leitner box, synced to your Drive.';
+  else if(state.mode==='phrases') text = '400 Spanish phrases across four levels (A1–B1.2), spaced out with a Leitner box, synced to your Drive.';
+  else text = 'Core Spanish vocabulary by topic and level (A1–A2), spaced out with a Leitner box.';
+  el.textContent = text;
+}
+
+function renderTabs(){
+  const tabsEl = document.getElementById('tabs');
+  tabsEl.innerHTML = CATEGORY_KEYS.map(function(key){
+    const active = state.verbs.activeCats.has(key);
+    return '<button class="tab'+(active?' active':'')+'" data-action="toggleCat" data-key="'+key+'" title="'+CATEGORY_META[key].label+'">'+CATEGORY_META[key].short+'</button>';
+  }).join('');
+}
+
+function renderStats(){
+  const data = cur();
+  const acc = data.stats.seen ? Math.round(data.stats.correct/data.stats.seen*100) : null;
+  const due = dueReviewCount();
+  let s = data.stats.seen+' seen'+(acc!==null? ' · '+acc+'% got it':'');
+  if(due>0) s += ' · '+due+' due for review';
+  document.getElementById('statLine').textContent = s;
+}
+
+function renderLevelTabs(){
+  const el = document.getElementById('levelTabs');
+  const levels = state.mode==='phrases' ? PHRASE_LEVELS : ['A1','A2'];
+  const activeLevel = state.mode==='phrases' ? state.phraseLevel : state.vocabLevel;
+  el.innerHTML = levels.map(function(lvl){
+    const active = activeLevel===lvl;
+    return '<button class="tab'+(active?' active':'')+'" data-action="setLevel" data-level="'+lvl+'">'+lvl+'</button>';
+  }).join('');
+}
+
+function renderSubjectTabs(){
+  const el = document.getElementById('subjectTabs');
+  el.innerHTML = VOCAB_CATEGORIES.map(function(cat){
+    const active = state.vocab.activeCategories.has(cat);
+    return '<button class="tab'+(active?' active':'')+'" data-action="toggleSubject" data-cat="'+escAttr(cat)+'">'+esc(cat)+'</button>';
+  }).join('');
+}
+
+function render(){
+  renderModeTabs();
+  renderSubtitle();
+  const tabsEl = document.getElementById('tabs');
+  const levelTabsEl = document.getElementById('levelTabs');
+  const subjectTabsEl = document.getElementById('subjectTabs');
+  if(state.mode==='verbs'){
+    tabsEl.style.display = '';
+    levelTabsEl.style.display = 'none';
+    subjectTabsEl.style.display = 'none';
+    renderTabs();
+  } else if(state.mode==='phrases'){
+    tabsEl.style.display = 'none';
+    levelTabsEl.style.display = '';
+    subjectTabsEl.style.display = 'none';
+    renderLevelTabs();
+  } else {
+    tabsEl.style.display = 'none';
+    levelTabsEl.style.display = '';
+    subjectTabsEl.style.display = '';
+    renderLevelTabs();
+    renderSubjectTabs();
+  }
+  renderStats();
+  const q = state.question;
+  const host = document.getElementById('cardHost');
+  const skipBtn = document.getElementById('skipBtn');
+  skipBtn.style.display = 'block';
+  skipBtn.onclick = nextQuestion;
+
+  let inner = '';
+
+  if(state.mode==='verbs'){
+    const meta = CATEGORY_META[q.cat];
+    inner += '<div class="eyebrow"><span class="mono">No. '+String(state.cardNo).padStart(3,'0')+'</span>';
+    inner += '<span class="eyebrowTag mono">'+meta.label+' · '+esc(q.personLabel)+'</span></div>';
+    inner += '<p class="sentence display">'+esc(q.sentence)+'</p>';
+    inner += '<div class="divider"></div>';
+
+    if(state.stage===0){
+      inner += '<button class="btn" data-action="showInf">Show infinitive</button>';
+    }
+    if(state.stage>=1){
+      inner += '<div class="infWrap"><span class="infWord mono">'+esc(q.verb.inf)+'</span><button class="speakBtn" data-action="speak" data-text="'+escAttr(q.verb.inf)+'" title="Listen">🔊</button><span class="infGloss">— '+esc(q.verb.en)+'</span></div>';
+    }
+    if(state.stage===1){
+      inner += '<button class="btn filled" data-action="showAns">Show answer</button>';
+    }
+    if(state.stage===2){
+      inner += '<div class="stamp mono" style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">'+esc(q.answer)+'<button class="speakBtn" data-action="speak" data-text="'+escAttr(q.answer)+'" title="Listen">🔊</button></div>';
+      inner += '<div class="btnRow">';
+      inner += '<button class="btnTeal" data-action="gotIt">✓ Got it</button>';
+      inner += '<button class="btnBrick" data-action="missedIt">✗ Missed it</button>';
+      inner += '</div>';
+
+      const table = buildFullTable(q.verb);
+      inner += '<div class="tableWrap"><div class="tableTitle mono">All conjugations — '+esc(q.verb.inf)+'</div>';
+      inner += '<div class="tableScroll"><table><thead><tr><th></th>'+TABLE_TENSES.map(function(t){return '<th>'+CATEGORY_META[t].short+'</th>';}).join('')+'</tr></thead><tbody>';
+      table.rows.forEach(function(row, i){
+        inner += '<tr class="trow"><td class="mono" style="color:var(--ink-soft)">'+esc(row.label)+'</td>';
+        row.forms.forEach(function(f, ti){
+          const tense = TABLE_TENSES[ti];
+          const isCurrent = q.idx===i && q.cat===tense;
+          inner += '<td class="mono" style="color:'+(isCurrent?'var(--gold)':'var(--ink)')+';font-weight:'+(isCurrent?600:400)+'">'+esc(f)+'</td>';
+        });
+        inner += '</tr>';
+      });
+      inner += '</tbody></table></div></div>';
+
+      if(table.imperativeRow){
+        inner += '<div class="cmdRow mono">';
+        table.imperativeRow.forEach(function(item){
+          const isCurrent = (q.cat==='impInformal'||q.cat==='impFormal') && q.personLabel===item.key;
+          inner += '<span><span style="color:var(--ink-soft)">'+item.key+': </span><span style="color:'+(isCurrent?'var(--gold)':'var(--ink)')+';font-weight:'+(isCurrent?600:400)+'">'+esc(item.form)+'</span></span>';
+        });
+        inner += '</div>';
+      }
+
+      const family = WORD_FAMILY_BY_VERB[q.verb.inf];
+      if(family && family.length){
+        const posOrder = ['noun','adj','adv'];
+        const present = posOrder.filter(function(p){ return family.some(function(f){ return f.pos===p; }); });
+        inner += '<div class="tableWrap"><div class="tableTitle mono">Word family — '+esc(q.verb.inf)+'</div>';
+        inner += '<div class="tableScroll"><table><thead><tr>'+present.map(function(p){ return '<th>'+POS_LABEL[p]+'</th>'; }).join('')+'</tr></thead><tbody><tr class="trow">';
+        present.forEach(function(p){
+          const items = family.filter(function(f){ return f.pos===p; });
+          const cell = items.map(function(f){
+            return '<div class="mono">'+esc(f.es)+' <button class="speakBtn small" data-action="speak" data-text="'+escAttr(f.es)+'" title="Listen">🔊</button></div><div style="font-size:10.5px;color:var(--ink-soft);margin-bottom:6px">'+esc(f.en)+'</div>';
+          }).join('');
+          inner += '<td style="vertical-align:top">'+cell+'</td>';
+        });
+        inner += '</tr></tbody></table></div></div>';
+      }
+    }
+  } else if(state.mode==='phrases') {
+    inner += '<div class="eyebrow"><span class="mono">No. '+String(state.cardNo).padStart(3,'0')+'</span>';
+    inner += '<span class="eyebrowTag mono">'+esc(q.phrase.level)+' phrase</span></div>';
+    inner += '<p class="sentence display">'+esc(q.sentence)+'</p>';
+    inner += '<div class="divider"></div>';
+
+    if(state.stage===0){
+      inner += '<button class="btn filled" data-action="showAns">Show answer</button>';
+    } else {
+      inner += '<div class="stamp mono" style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">'+esc(q.answer)+'<button class="speakBtn" data-action="speak" data-text="'+escAttr(q.answer)+'" title="Listen">🔊</button></div>';
+      inner += '<div class="btnRow">';
+      inner += '<button class="btnTeal" data-action="gotIt">✓ Got it</button>';
+      inner += '<button class="btnBrick" data-action="missedIt">✗ Missed it</button>';
+      inner += '</div>';
+    }
+  } else {
+    inner += '<div class="eyebrow"><span class="mono">No. '+String(state.cardNo).padStart(3,'0')+'</span>';
+    inner += '<span class="eyebrowTag mono">'+esc(q.item.level)+' · '+esc(q.item.category)+'</span></div>';
+    inner += '<p class="sentence display">'+esc(q.sentence)+'</p>';
+    inner += '<div class="divider"></div>';
+
+    if(state.stage===0){
+      inner += '<button class="btn filled" data-action="showAns">Show answer</button>';
+    } else {
+      inner += '<div class="stamp mono" style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">'+esc(q.answer)+'<button class="speakBtn" data-action="speak" data-text="'+escAttr(q.answer)+'" title="Listen">🔊</button></div>';
+      inner += '<div class="btnRow">';
+      inner += '<button class="btnTeal" data-action="gotIt">✓ Got it</button>';
+      inner += '<button class="btnBrick" data-action="missedIt">✗ Missed it</button>';
+      inner += '</div>';
+    }
+  }
+
+  host.innerHTML = '<div class="card">'+inner+'</div>';
+}
+
+document.addEventListener('click', function(e){
+  const t = e.target.closest('[data-action]');
+  if(!t) return;
+  const action = t.getAttribute('data-action');
+  if(action==='toggleCat') toggleCategory(t.getAttribute('data-key'));
+  else if(action==='setMode') setMode(t.getAttribute('data-mode'));
+  else if(action==='setLevel') setLevel(t.getAttribute('data-level'));
+  else if(action==='toggleSubject') toggleVocabCategory(t.getAttribute('data-cat'));
+  else if(action==='speak') speak(t.getAttribute('data-text'));
+  else if(action==='showInf') showInfinitive();
+  else if(action==='showAns') showAnswer();
+  else if(action==='gotIt') reportResult(true);
+  else if(action==='missedIt') reportResult(false);
+});
+
+loadAndStart();
+</script>
+
+
+</body></html>
